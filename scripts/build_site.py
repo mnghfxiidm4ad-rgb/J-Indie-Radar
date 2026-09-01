@@ -43,7 +43,10 @@ def site_config() -> dict:
         "site_url": site_url,
         "tagline": "Discover Hidden Japanese Indie Gems & Untranslated Classics",
         "contact_email": os.environ.get("CONTACT_EMAIL", "editorial@j-indie-radar.example"),
-        "google_form_embed": os.environ.get("GOOGLE_FORM_EMBED_URL", "").strip(),
+        "google_form_embed": os.environ.get(
+            "GOOGLE_FORM_EMBED_URL",
+            "https://docs.google.com/forms/d/e/1FAIpQLSfqzO3DXp5V8f8FdWfNxgAk_bgJMSXIcMlWHQiFvQkuTMMukA/viewform?embedded=true",
+        ).strip(),
         "adsense_client_id": os.environ.get("ADSENSE_CLIENT_ID", "ca-pub-2075840815269276").strip() or "ca-pub-2075840815269276",
         "ga_id": os.environ.get("GA_MEASUREMENT_ID", "").strip(),
         "year": date.today().year,
