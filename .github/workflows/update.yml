@@ -26,7 +26,7 @@ jobs:
       - name: Fetch up to 3 new dossiers and rebuild
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          GEMINI_MODEL: ${{ vars.GEMINI_MODEL || 'gemini-1.5-flash' }}
+          GEMINI_MODEL: ${{ vars.GEMINI_MODEL || 'gemini-3.5-flash' }}
           SITE_URL: ${{ vars.SITE_URL }}
           CONTACT_EMAIL: ${{ vars.CONTACT_EMAIL }}
           GOOGLE_FORM_EMBED_URL: ${{ vars.GOOGLE_FORM_EMBED_URL }}

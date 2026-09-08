@@ -6,14 +6,14 @@
     <h1>{{ game.title }}</h1>
     <p class="byline">{{ game.developer }} · First released {{ game.release_year }} · Language barrier: {{ game.language_barrier.level }} · Updated {{ game.updated }}</p>
     <div class="article-cover">
-      <img src="{{ game.header_image }}" alt="{{ game.title }} header art">
+      <img src="{{ game.header_image | media_url(root_prefix) }}" alt="{{ game.title }} header art">
     </div>
   </header>
   <dl class="stats">
     <div class="stat"><dt>Vibe</dt><dd>{{ game.vibe }}</dd></div>
     <div class="stat"><dt>Playtime</dt><dd>{{ game.playtime_short }}</dd></div>
     <div class="stat"><dt>Difficulty</dt><dd>{{ game.difficulty }}</dd></div>
-    <div class="stat"><dt>Steam</dt><dd><a href="{{ game.steam_url }}" rel="noopener noreferrer">Store page</a></dd></div>
+    <div class="stat"><dt>Store</dt><dd>{% if game.steam_url %}<a href="{{ game.steam_url }}" rel="noopener noreferrer">{% if 'steampowered.com' in game.steam_url %}Steam{% else %}Store page{% endif %}</a>{% else %}Not listed on Steam{% endif %}</dd></div>
   </dl>
   <aside class="ad-slot" aria-label="Advertisement">
     <p class="ad-label">Advertisement</p>

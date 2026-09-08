@@ -1,1 +1,1 @@
-# J-Indie Radar scripts package
+# J-Indie Radar scripts package.

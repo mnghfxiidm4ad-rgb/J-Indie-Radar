@@ -23,11 +23,13 @@ Put `GEMINI_API_KEY` in `.env` and extra Steam app IDs in `data/watchlist.json`.
 python scripts/fetch_and_summarize.py --update --max 3
 ```
 
-- Default model: `gemini-1.5-flash`
-- `time.sleep(8)` after each Gemini call
+- Default model: `gemini-3.5-flash` (falls back through `gemini-3.6-flash`, `gemini-3.1-flash-lite`, `gemini-flash-latest`, `gemini-2.5-flash`, then any Flash model the API key can list)
+- Uses the Gemini REST API via `requests` (no `google-generativeai` SDK)
 - Exponential backoff on HTTP 429
+- Steam titles are only applied when the store name matches the editorial title (Steam recycles app IDs)
+- `--update` fails instead of silently rebuilding if a watchlist title cannot be written
 
-GitHub Actions runs at 10:00 JST (`cron: '0 1 * * *'`) and adds up to 3 titles. Store `GEMINI_API_KEY` as a repository secret.
+GitHub Actions runs at 10:00 JST (`cron: '0 1 * * *'`) and adds up to 3 titles. Store `GEMINI_API_KEY` as a repository secret. If that secret is missing, the job now fails on purpose.
 
 ## AdSense checklist
 

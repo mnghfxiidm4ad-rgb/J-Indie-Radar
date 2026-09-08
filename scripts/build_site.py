@@ -54,12 +54,14 @@ def site_config() -> dict:
 
 
 def jinja_env() -> Environment:
-    return Environment(
+    env = Environment(
         loader=FileSystemLoader(str(TEMPLATES)),
         autoescape=select_autoescape(["html", "xml"]),
         trim_blocks=True,
         lstrip_blocks=True,
     )
+    env.filters["media_url"] = media_url
+    return env
 
 
 def load_seed_games() -> list[dict]:
@@ -92,20 +94,84 @@ def steam_urls(appid: int) -> dict:
     }
 
 
+def media_url(url: str, root_prefix: str = "") -> str:
+    url = (url or "").strip()
+    if url.startswith("http://") or url.startswith("https://"):
+        return url
+    if not url:
+        url = "img/placeholder-header.svg"
+    return f"{root_prefix}{url.lstrip('/')}"
+
+
+def absolute_media(cfg: dict, url: str) -> str:
+    url = (url or "").strip()
+    if url.startswith("http://") or url.startswith("https://"):
+        return url
+    if not url:
+        url = "img/placeholder-header.svg"
+    return f"{cfg['site_url']}/{url.lstrip('/')}"
+
+
+def _coerce_why(items) -> list[dict]:
+    fixed: list[dict] = []
+    if not isinstance(items, list):
+        return fixed
+    for item in items:
+        if isinstance(item, dict):
+            title = str(item.get("title") or "").strip()
+            details = str(item.get("details") or "").strip()
+            if title or details:
+                fixed.append({"title": title or (details[:80] if details else "Note"), "details": details or title})
+        elif isinstance(item, str) and item.strip():
+            heading, _, rest = item.partition(".")
+            fixed.append({"title": heading.strip() or item[:80], "details": (rest or item).strip()})
+    return fixed
+
+
+def _coerce_language_barrier(raw) -> dict:
+    if isinstance(raw, dict):
+        lb = dict(raw)
+    elif isinstance(raw, str) and raw.strip():
+        lb = {"level": raw.strip(), "details": raw.strip()}
+    else:
+        lb = {}
+    level = str(lb.get("level") or "")
+    low = level.lower()
+    if low.startswith("none") or "visual" in low:
+        level = "None (Visual/Action only)"
+    elif low.startswith("low") or "basic ui" in low:
+        level = "Low (Basic UI/Menu)"
+    elif low.startswith("high") or "text-heavy" in low:
+        level = "High (Text-Heavy/Lore)"
+    elif low.startswith("medium") or "screen" in low:
+        level = "Medium (Screen Translation OK)"
+    elif not level:
+        level = "Medium (Screen Translation OK)"
+    lb["level"] = level
+    lb.setdefault("details", level)
+    if "score" not in lb:
+        lb["score"] = 0 if level.startswith("None") else 1 if level.startswith("Low") else 2 if level.startswith("Medium") else 3
+    return lb
+
+
 def normalize_game(game: dict) -> dict:
     appid = int(game["appid"])
-    urls = steam_urls(appid)
     out = dict(game)
     out["appid"] = appid
-    out.setdefault("header_image", urls["header_image"])
-    out.setdefault("steam_url", urls["steam_url"])
+    if out.get("skip_steam") or out.get("steam_mismatch"):
+        out.setdefault("header_image", "img/placeholder-header.svg")
+        if out.get("steam_mismatch"):
+            out["steam_url"] = out.get("store_url") or ""
+        elif not out.get("steam_url"):
+            out["steam_url"] = out.get("store_url") or ""
+    else:
+        urls = steam_urls(appid)
+        out.setdefault("header_image", urls["header_image"])
+        out.setdefault("steam_url", urls["steam_url"])
     out.setdefault("updated", date.today().isoformat())
     out.setdefault("genres", [out.get("primary_genre", "Action")])
-    lb = out.get("language_barrier") or {}
-    if "score" not in lb:
-        level = str(lb.get("level", ""))
-        lb["score"] = 0 if level.startswith("None") else 1 if level.startswith("Low") else 2 if level.startswith("Medium") else 3
-        out["language_barrier"] = lb
+    out["why_trending_in_japan"] = _coerce_why(out.get("why_trending_in_japan"))
+    out["language_barrier"] = _coerce_language_barrier(out.get("language_barrier"))
     return out
 
 
@@ -136,7 +202,7 @@ def json_ld_article(cfg: dict, game: dict) -> str:
             "inLanguage": "en",
             "author": {"@type": "Organization", "name": cfg["site_name"]},
             "publisher": {"@type": "Organization", "name": cfg["site_name"]},
-            "image": game["header_image"],
+            "image": absolute_media(cfg, game["header_image"]),
             "mainEntityOfPage": f"{cfg['site_url']}/games/{game['slug']}.html",
             "about": {"@type": "VideoGame", "name": game["title"], "author": game["developer"]},
         },
@@ -161,6 +227,21 @@ def json_ld_about(cfg: dict, page_title: str, description: str, path: str) -> st
 def render_to(path: Path, html: str) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(html, encoding="utf-8")
+
+
+PLACEHOLDER_SVG = """<svg xmlns="http://www.w3.org/2000/svg" width="616" height="353" viewBox="0 0 616 353" role="img" aria-label="No store header">
+  <rect width="616" height="353" fill="#141821"/>
+  <rect x="24" y="24" width="568" height="305" fill="none" stroke="#f0c14b" stroke-opacity="0.35"/>
+  <text x="308" y="170" text-anchor="middle" fill="#e8eaef" font-family="Segoe UI, sans-serif" font-size="28">J-Indie Radar</text>
+  <text x="308" y="208" text-anchor="middle" fill="#9aa3b5" font-family="Segoe UI, sans-serif" font-size="16">No Steam header for this title</text>
+</svg>
+"""
+
+
+def ensure_placeholder() -> None:
+    dest = DOCS / "img" / "placeholder-header.svg"
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    dest.write_text(PLACEHOLDER_SVG, encoding="utf-8")
 
 
 def render_contact_body(raw: str, cfg: dict) -> str:
@@ -205,14 +286,15 @@ def write_robots_and_sitemap(cfg: dict, games: list[dict]) -> None:
 def build() -> list[dict]:
     cfg = site_config()
     env = jinja_env()
+    ensure_placeholder()
     games = [normalize_game(g) for g in load_catalog()]
     games.sort(key=lambda g: (g.get("primary_genre", ""), g["title"]))
     DATA.mkdir(parents=True, exist_ok=True)
     (DATA / "games.json").write_text(json.dumps(games, ensure_ascii=False, indent=2), encoding="utf-8")
 
-    default_og = f"{cfg['site_url']}/og-default.jpg"
+    default_og = f"{cfg['site_url']}/img/placeholder-header.svg"
     if games:
-        default_og = games[0]["header_image"]
+        default_og = absolute_media(cfg, games[0]["header_image"])
 
     index_html = env.get_template("index.html").render(
         page_title=f"{cfg['site_name']} — {cfg['tagline']}",
@@ -241,7 +323,7 @@ def build() -> list[dict]:
             meta_description=f"{game['vibe']}. {game['language_barrier']['level']}. Independent English analysis of a Japanese indie.",
             canonical=f"{cfg['site_url']}/games/{game['slug']}.html",
             og_type="article",
-            og_image=game["header_image"],
+            og_image=absolute_media(cfg, game["header_image"]),
             json_ld=json_ld_article(cfg, game),
             root_prefix="../",
             nav="home",

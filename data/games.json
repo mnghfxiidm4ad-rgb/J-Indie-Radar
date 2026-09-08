@@ -1,90 +1,9 @@
 [
   {
-    "appid": 822240,
-    "slug": "giga-wrecker-alt",
-    "title": "Animal Jam",
-    "developer": "WildWorks, Inc.",
-    "release_year": 2018,
-    "genres": [
-      "Action",
-      "Adventure"
-    ],
-    "primary_genre": "Action",
-    "vibe": "Physics-wrecking 2D action from an unexpected Japanese lab",
-    "playtime_short": "8-14 hours",
-    "difficulty": "Medium-high, physics literacy",
-    "language_barrier": {
-      "level": "Low (Basic UI/Menu)",
-      "score": 1,
-      "details": "English is available. Story is present but not a visual-novel wall. The real text is tutorializing a physics sandbox: grab, wreck, rebuild. Japanese flavor lines are extra. You can play on animation. Menus are modern. Low barrier, with a physics barrier that has nothing to do with kanji."
-    },
-    "what_is_it": "GIGA WRECKER ALT. is Game Freak's 2D action experiment about a protagonist who smashes a wrecked world with a gadget that treats debris as both weapon and platform. It is a strange object on this radar: not a doujin circle, not RPG Maker, still a Japanese original that overseas players missed because the publisher name makes people expect monsters in pockets. Japanese players who did play it talk about the feel of throwing a building fragment more than they talk about lore. You explore compact stages, solve traversal with wreckage, and fight using the same verbs. ALT. is the version that refined the original GIGA WRECKER idea for a wider audience. It belongs here because 'Japanese indie' in practice includes small internal experiments from known companies that still play like authored 2D, not like a live-service.",
-    "deep_dive_analysis": "The wrecking hook has to do double duty as combat and as movement. If debris is only a gimmick hammer, the game dies. ALT. keeps asking you to create a platform, a projectile, a shield, sometimes in the same room. That is closer to a physics toy than to Cave Story's gun-exp, and it will frustrate players who want a fixed moveset. Japanese action fans who like gadget games (think 'the tool is the level') are the native audience. Stage design is a series of sentences in the grammar of grab-and-throw. Bosses test whether you learned that grammar or only mashed. Compared with Ladybug Metroidvanias, there is less map web and more stage-by-stage gadget exam. Compared with Pixel, the humor is different and the production is slicker. Language does not hide the toy. Physics will. If your machine or your patience cannot stand 2D physics jitter, this is not your dossier. If you want a Japanese action game that is not a horror school or a Touhou house, this is a useful outlier. The Game Freak label is trivia until you play; then it is a reminder that Japanese 2D R&D did not end in 2004.",
-    "why_trending_in_japan": [
-      {
-        "title": "The 'Game Freak made a weird 2D game' hook",
-        "details": "Curiosity traffic is real. Japanese threads still surface it as a did-you-know, which is a form of trending even without a new launch."
-      },
-      {
-        "title": "Wreckage clips are inherently watchable",
-        "details": "Throwing debris around is video bait. That keeps a mid-size action game alive in recommendation videos."
-      },
-      {
-        "title": "Gadget-action fans treat it as a kit",
-        "details": "Players who like tool-verbs over character-switch RPGs keep it in a small but loyal Steam conversation."
-      }
-    ],
-    "playtime_and_difficulty": "Eight to fourteen hours for a campaign. Medium-high if physics puzzles click; higher if they do not. Not a 40-hour RPG. Replays are for challenge, not for a second plot.",
-    "target_audience": "2D action and physics-puzzle players, people bored of identical Metroidvanias, curiosity-seekers. Skip if you need Souls combat or a visual novel.",
-    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/822240/header.jpg?t=1740080349",
-    "steam_url": "https://store.steampowered.com/app/822240/",
-    "updated": "2026-08-26"
-  },
-  {
-    "appid": 336380,
-    "slug": "kero-blaster",
-    "title": "Catmouth Island",
-    "developer": "Colonthree Enterprises",
-    "release_year": 2015,
-    "genres": [
-      "Action"
-    ],
-    "primary_genre": "Action",
-    "vibe": "Frog salaryman run-and-gun, Pixel-tight",
-    "playtime_short": "4-7 hours",
-    "difficulty": "Medium-high",
-    "language_barrier": {
-      "level": "Low (Basic UI/Menu)",
-      "score": 1,
-      "details": "English is available. Dialogue is spare, punchy, and not a puzzle engine. Japanese play is still Low barrier: stages are action-readable, shop text is short. You might miss Pixel's deadpan office humor. You will not miss a lock-and-key. This is a comfortable overseas pickup."
-    },
-    "what_is_it": "Kero Blaster is Studio Pixel's run-and-gun about a frog in a beige company universe who is sent to shoot problems because that is what the job ticket says. Stages are compact, guns are distinct, and the humor is dry enough that Japanese players quote it like a workplace manga. It is not Cave Story 2. It is Pixel proving that short levels, tight knockback, and a handful of weapons still beat a 40-hour map. Steam also became home to related shorts such as Pink Hour, so Kero Blaster sits in a tiny Pixel action cluster. Overseas players who only know Cave Story often arrive shocked at how arcade this one is. Japanese players recommend it when someone wants Pixel feel without a weekend of NPC flags.",
-    "deep_dive_analysis": "Pixel's gun philosophy returns: weapons have identities, not just damage numbers, and the stage geometry is built to make you swap. Recoil, enemy placement, and slightly mean hitspark timing create an I-should-have-known death rather than a souls tax. Levels are authored like music tracks: a motif, a spike, a joke, a boss. The office framing device lets Pixel do silent-comedy worldbuilding in the shop and cutaways without a JRPG script budget. Compared with Mega Man, there is less kit-grinding and more learn-this-corridor's-verb. Compared with Downwell, there is more placed level design and less procedural generation. The campaign length is a feature. Japanese finish-it-tonight culture loves a game that actually ends. Secrets exist but do not require La-Mulana notes. If you are studying 2D game feel, Kero Blaster is a smaller textbook than Cave Story and sometimes a clearer one because there is less plot fog around the jump.",
-    "why_trending_in_japan": [
-      {
-        "title": "Pixel after Cave Story is news that never expired",
-        "details": "Any Pixel action game gets a look. Kero Blaster's frog salaryman is easy to meme, which keeps screenshots circulating independent of a sale."
-      },
-      {
-        "title": "Short and actually difficult",
-        "details": "Japanese reviews praise the honesty of a four-to-seven-hour run-and-gun in a market of padded Metroidvanias. It is a palate cleanser recommendation."
-      },
-      {
-        "title": "Workplace humor lands locally",
-        "details": "The company-frog gag is extremely Japanese-office. That tone is cited as this-could-only-be-Pixel in a way that overseas players may only half-get, which Japanese fans find delightful."
-      }
-    ],
-    "playtime_and_difficulty": "A first clear is an evening or two. Medium-high execution difficulty, low knowledge difficulty. Replays are for pride and extra challenges, not for a 100-hour skill tree.",
-    "target_audience": "Mega Man and Cave Story fans, people with limited time, students of 2D feel. Not for open-world grazers. Pair with Downwell for a Japanese action double feature that needs almost no reading.",
-    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/336380/header.jpg?t=1447365662",
-    "steam_url": "https://store.steampowered.com/app/336380/",
-    "updated": "2026-08-26"
-  },
-  {
     "appid": 200900,
     "slug": "cave-story-plus",
     "title": "Cave Story+",
-    "developer": "Nicalis, Inc., Studio Pixel",
+    "developer": "Studio Pixel",
     "release_year": 2011,
     "genres": [
       "Action",
@@ -117,15 +36,15 @@
     ],
     "playtime_and_difficulty": "A blind normal ending is roughly eight to ten hours for a competent 2D player. True-ending knowledge runs stretch toward twelve to fourteen hours with backtracking. Difficulty is medium with sharp bosses; death is cheap and checkpoints are mostly fair. Challenge modes in Plus are optional and much harder. There is no modern difficulty slider that removes pattern learning.",
     "target_audience": "Players who want a complete 2D action-adventure with authored NPC writing, weapon identity, and multiple endings, especially people who bounced off Hollow Knight's size and want a tighter Japanese classic. Also recommended to developers studying solo-game pacing. Skip it only if you need 3D production values or refuse pixel art on principle.",
-    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/200900/23d8972e068689b1d688f20972fa343813e0431f/header.jpg?t=1781395150",
     "steam_url": "https://store.steampowered.com/app/200900/",
-    "updated": "2026-08-26"
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/200900/23d8972e068689b1d688f20972fa343813e0431f/header.jpg?t=1781395150",
+    "updated": "2026-09-08"
   },
   {
     "appid": 285440,
     "slug": "crimzon-clover",
     "title": "Crimzon Clover WORLD IGNITION",
-    "developer": "YOTSUBANE, Adventure Planning Service",
+    "developer": "Yotsubane",
     "release_year": 2014,
     "genres": [
       "Action"
@@ -157,9 +76,9 @@
     ],
     "playtime_and_difficulty": "You can see all stages in an evening with continues. Mastery is measured in credits and rank, which is endless. Difficulty is high. Beginners should play for survival first and pretend score is later.",
     "target_audience": "Shmup fans, Touhou players who want a non-Gensokyo cabinet, action players who like patterns. Skip if you hate bullet density or need a story RPG.",
-    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/285440/header.jpg?t=1729476866",
     "steam_url": "https://store.steampowered.com/app/285440/",
-    "updated": "2026-08-26"
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/285440/header.jpg?t=1729476866",
+    "updated": "2026-09-08"
   },
   {
     "appid": 1458790,
@@ -200,13 +119,13 @@
     "target_audience": "Metroidvania and soulslike players who want Japanese art direction and a finite campaign. Good if Hollow Knight's size intimidated you. Skip if you need a party-chat JRPG or hate 2D bosses.",
     "header_image": "https://cdn.akamai.steamstatic.com/steam/apps/1458790/header.jpg",
     "steam_url": "https://store.steampowered.com/app/1458790/",
-    "updated": "2026-08-26"
+    "updated": "2026-09-08"
   },
   {
     "appid": 2725260,
     "slug": "ender-magnolia",
     "title": "ENDER MAGNOLIA: Bloom in the Mist",
-    "developer": "Adglobe, Live Wire",
+    "developer": "Live Wire",
     "release_year": 2024,
     "genres": [
       "Action",
@@ -239,15 +158,136 @@
     ],
     "playtime_and_difficulty": "Fifteen to twenty-five hours is a fair first-campaign window depending on side rooms. Medium-high bosses. More systems than Lilies, still finite. Wait for patches if you are allergic to day-one jank; the design intent is a complete action RPG, not a live-service.",
     "target_audience": "Ender Lilies players, Metroidvania-RPG fans, people who want Japanese dark fantasy without a 60-hour JRPG calendar. Skip if 2D action bosses make you miserable.",
-    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2725260/header.jpg?t=1740447961",
     "steam_url": "https://store.steampowered.com/app/2725260/",
-    "updated": "2026-08-26"
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2725260/header.jpg?t=1740447961",
+    "updated": "2026-09-08"
   },
   {
-    "appid": 1273710,
+    "appid": 454410,
+    "slug": "giga-wrecker-alt",
+    "title": "GIGA WRECKER ALT.",
+    "developer": "Game Freak",
+    "release_year": 2018,
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "primary_genre": "Action",
+    "vibe": "Physics-wrecking 2D action from an unexpected Japanese lab",
+    "playtime_short": "8-14 hours",
+    "difficulty": "Medium-high, physics literacy",
+    "language_barrier": {
+      "level": "Low (Basic UI/Menu)",
+      "score": 1,
+      "details": "English is available. Story is present but not a visual-novel wall. The real text is tutorializing a physics sandbox: grab, wreck, rebuild. Japanese flavor lines are extra. You can play on animation. Menus are modern. Low barrier, with a physics barrier that has nothing to do with kanji."
+    },
+    "what_is_it": "GIGA WRECKER ALT. is Game Freak's 2D action experiment about a protagonist who smashes a wrecked world with a gadget that treats debris as both weapon and platform. It is a strange object on this radar: not a doujin circle, not RPG Maker, still a Japanese original that overseas players missed because the publisher name makes people expect monsters in pockets. Japanese players who did play it talk about the feel of throwing a building fragment more than they talk about lore. You explore compact stages, solve traversal with wreckage, and fight using the same verbs. ALT. is the version that refined the original GIGA WRECKER idea for a wider audience. It belongs here because 'Japanese indie' in practice includes small internal experiments from known companies that still play like authored 2D, not like a live-service.",
+    "deep_dive_analysis": "The wrecking hook has to do double duty as combat and as movement. If debris is only a gimmick hammer, the game dies. ALT. keeps asking you to create a platform, a projectile, a shield, sometimes in the same room. That is closer to a physics toy than to Cave Story's gun-exp, and it will frustrate players who want a fixed moveset. Japanese action fans who like gadget games (think 'the tool is the level') are the native audience. Stage design is a series of sentences in the grammar of grab-and-throw. Bosses test whether you learned that grammar or only mashed. Compared with Ladybug Metroidvanias, there is less map web and more stage-by-stage gadget exam. Compared with Pixel, the humor is different and the production is slicker. Language does not hide the toy. Physics will. If your machine or your patience cannot stand 2D physics jitter, this is not your dossier. If you want a Japanese action game that is not a horror school or a Touhou house, this is a useful outlier. The Game Freak label is trivia until you play; then it is a reminder that Japanese 2D R&D did not end in 2004.",
+    "why_trending_in_japan": [
+      {
+        "title": "The 'Game Freak made a weird 2D game' hook",
+        "details": "Curiosity traffic is real. Japanese threads still surface it as a did-you-know, which is a form of trending even without a new launch."
+      },
+      {
+        "title": "Wreckage clips are inherently watchable",
+        "details": "Throwing debris around is video bait. That keeps a mid-size action game alive in recommendation videos."
+      },
+      {
+        "title": "Gadget-action fans treat it as a kit",
+        "details": "Players who like tool-verbs over character-switch RPGs keep it in a small but loyal Steam conversation."
+      }
+    ],
+    "playtime_and_difficulty": "Eight to fourteen hours for a campaign. Medium-high if physics puzzles click; higher if they do not. Not a 40-hour RPG. Replays are for challenge, not for a second plot.",
+    "target_audience": "2D action and physics-puzzle players, people bored of identical Metroidvanias, curiosity-seekers. Skip if you need Souls combat or a visual novel.",
+    "steam_url": "https://store.steampowered.com/app/454410/",
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/454410/header.jpg?t=1553785513",
+    "updated": "2026-09-08"
+  },
+  {
+    "appid": 292500,
+    "slug": "kero-blaster",
+    "title": "Kero Blaster",
+    "developer": "Studio Pixel",
+    "release_year": 2015,
+    "genres": [
+      "Action"
+    ],
+    "primary_genre": "Action",
+    "vibe": "Frog salaryman run-and-gun, Pixel-tight",
+    "playtime_short": "4-7 hours",
+    "difficulty": "Medium-high",
+    "language_barrier": {
+      "level": "Low (Basic UI/Menu)",
+      "score": 1,
+      "details": "English is available. Dialogue is spare, punchy, and not a puzzle engine. Japanese play is still Low barrier: stages are action-readable, shop text is short. You might miss Pixel's deadpan office humor. You will not miss a lock-and-key. This is a comfortable overseas pickup."
+    },
+    "what_is_it": "Kero Blaster is Studio Pixel's run-and-gun about a frog in a beige company universe who is sent to shoot problems because that is what the job ticket says. Stages are compact, guns are distinct, and the humor is dry enough that Japanese players quote it like a workplace manga. It is not Cave Story 2. It is Pixel proving that short levels, tight knockback, and a handful of weapons still beat a 40-hour map. Steam also became home to related shorts such as Pink Hour, so Kero Blaster sits in a tiny Pixel action cluster. Overseas players who only know Cave Story often arrive shocked at how arcade this one is. Japanese players recommend it when someone wants Pixel feel without a weekend of NPC flags.",
+    "deep_dive_analysis": "Pixel's gun philosophy returns: weapons have identities, not just damage numbers, and the stage geometry is built to make you swap. Recoil, enemy placement, and slightly mean hitspark timing create an I-should-have-known death rather than a souls tax. Levels are authored like music tracks: a motif, a spike, a joke, a boss. The office framing device lets Pixel do silent-comedy worldbuilding in the shop and cutaways without a JRPG script budget. Compared with Mega Man, there is less kit-grinding and more learn-this-corridor's-verb. Compared with Downwell, there is more placed level design and less procedural generation. The campaign length is a feature. Japanese finish-it-tonight culture loves a game that actually ends. Secrets exist but do not require La-Mulana notes. If you are studying 2D game feel, Kero Blaster is a smaller textbook than Cave Story and sometimes a clearer one because there is less plot fog around the jump.",
+    "why_trending_in_japan": [
+      {
+        "title": "Pixel after Cave Story is news that never expired",
+        "details": "Any Pixel action game gets a look. Kero Blaster's frog salaryman is easy to meme, which keeps screenshots circulating independent of a sale."
+      },
+      {
+        "title": "Short and actually difficult",
+        "details": "Japanese reviews praise the honesty of a four-to-seven-hour run-and-gun in a market of padded Metroidvanias. It is a palate cleanser recommendation."
+      },
+      {
+        "title": "Workplace humor lands locally",
+        "details": "The company-frog gag is extremely Japanese-office. That tone is cited as this-could-only-be-Pixel in a way that overseas players may only half-get, which Japanese fans find delightful."
+      }
+    ],
+    "playtime_and_difficulty": "A first clear is an evening or two. Medium-high execution difficulty, low knowledge difficulty. Replays are for pride and extra challenges, not for a 100-hour skill tree.",
+    "target_audience": "Mega Man and Cave Story fans, people with limited time, students of 2D feel. Not for open-world grazers. Pair with Downwell for a Japanese action double feature that needs almost no reading.",
+    "steam_url": "https://store.steampowered.com/app/292500/",
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/292500/header.jpg?t=1728281051",
+    "updated": "2026-09-08"
+  },
+  {
+    "appid": 409670,
+    "slug": "pink-hour",
+    "title": "Pink Hour",
+    "developer": "Studio Pixel",
+    "release_year": 2015,
+    "genres": [
+      "Action"
+    ],
+    "primary_genre": "Action",
+    "vibe": "Micro run-and-gun snack from Pixel's frog universe",
+    "playtime_short": "1-2 hours",
+    "difficulty": "High, tiny, repeatable",
+    "language_barrier": {
+      "level": "None (Visual/Action only)",
+      "score": 0,
+      "details": "Pink Hour is a short action toy. Menus are minimal, stages are readable, and story is a wink. English or Japanese changes almost nothing in play. If you can parse a gun icon, you can play. This is a None on the radar's scale, useful as a proof that Japanese indies are not all visual novels."
+    },
+    "what_is_it": "Pink Hour is Studio Pixel's bite-sized run-and-gun set in the same dry corporate-frog neighborhood as Kero Blaster, built as a short, mean, almost arcade-cabinet night. You pick a route, shoot, die, and restart in minutes rather than evenings. It exists on Steam as both a companion piece and a statement: Pixel still likes games that end before your tea cools. Japanese players often buy it in a bundle mindset with Kero Blaster and Pink Heaven, treating the trio as a studio sampler. Overseas, it is easy to overlook because it does not look like a 20-hour Metroidvania. That is the point. The dossier is here because AdSense-era sites skip microgames, and skipping them is how you lie about Japanese indie culture. Not everything from Japan is a 40-hour JRPG with a language panic attack.",
+    "deep_dive_analysis": "A micro campaign forces honesty. There is no skill tree to hide weak corridors. Each screen is a verb exam: which gun, which jump, which enemy is actually a platform. Death is the tutorial, restart is the loop, and mastery is measured in clean clears rather than in lore flags. Compared with Kero Blaster, Pink Hour is denser and less interested in office-comedy connective tissue. Compared with Downwell, it is authored rather than rolled. The design lesson for overseas players is about Japanese doujin length: a complete thought can be ninety minutes. Steam pages that look 'too small' are often the ones Japanese action fans actually finish. Weapon feel still carries Pixel's recoil personality. If you bounce because there is no map to color in, you are asking the wrong question of a cabinet game. If you chase time attacks, you will find the real depth hiding in enemy placements that look cute until they are not. Pink Heaven exists as a sibling variation; this dossier focuses on Hour as the sharper snack.",
+    "why_trending_in_japan": [
+      {
+        "title": "Bundle culture around Pixel shorts",
+        "details": "Japanese shoppers treat Pink Hour as part of a Pixel action set, not a standalone AAA pitch. It trends whenever Kero Blaster is on sale because people complete the set."
+      },
+      {
+        "title": "Respect for games that end",
+        "details": "In recommendation threads that complain about padded indies, Pixel microgames get named as a palate cleanser. Short does not mean unfinished in this scene."
+      },
+      {
+        "title": "Score and clear clips travel",
+        "details": "A one-hour game is easy to screenshot as a full clear. That completion energy is social in a way a 60-hour JRPG save file is not."
+      }
+    ],
+    "playtime_and_difficulty": "One to two hours to see the whole thought, longer if you hunt clean ranks. Difficulty is high per minute, low per calendar. Perfect for a commute if your nerves can take it.",
+    "target_audience": "Kero Blaster fans, arcade masochists, and readers who want a language-free Japanese action hit. Skip if you need narrative, RPG stats, or a weekend-sized map.",
+    "steam_url": "https://store.steampowered.com/app/409670/",
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/409670/header.jpg?t=1729065126",
+    "updated": "2026-09-08"
+  },
+  {
+    "appid": 1203630,
     "slug": "deedlit-in-wonder-labyrinth",
-    "title": "King of Crabs",
-    "developer": "Robot Squid, Spilt Milk Studios Ltd",
+    "title": "Record of Lodoss War: Deedlit in Wonder Labyrinth",
+    "developer": "Team Ladybug",
     "release_year": 2021,
     "genres": [
       "Action",
@@ -280,55 +320,55 @@
     ],
     "playtime_and_difficulty": "Plan for a weekend. Combat difficulty is medium; elemental mistakes feel like the player error they are. Boss health is respectable but not souls-padding. Full map completion adds a few hours of polite backtracking.",
     "target_audience": "Fantasy Metroidvania fans, Lodoss and OVA nostalgics, and Luna Nights players who want another Ladybug campaign. Not a replacement for a 40-hour JRPG. Fine for newcomers if they accept 2D action literacy.",
-    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1273710/header.jpg?t=1725016149",
-    "steam_url": "https://store.steampowered.com/app/1273710/",
-    "updated": "2026-08-26"
+    "steam_url": "https://store.steampowered.com/app/1203630/",
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1203630/header.jpg?t=1774922378",
+    "updated": "2026-09-08"
   },
   {
-    "appid": 407880,
-    "slug": "pink-hour",
-    "title": "Mad Nords: Probably an Epic Quest",
-    "developer": "Dragon's Games",
-    "release_year": 2015,
+    "appid": 420770,
+    "slug": "legend-of-dark-witch",
+    "title": "The Legend of Dark Witch",
+    "developer": "Inside System",
+    "release_year": 2014,
     "genres": [
       "Action"
     ],
     "primary_genre": "Action",
-    "vibe": "Micro run-and-gun snack from Pixel's frog universe",
-    "playtime_short": "1-2 hours",
-    "difficulty": "High, tiny, repeatable",
+    "vibe": "Doujin mega-style witch, compact Japanese action homework",
+    "playtime_short": "5-10 hours",
+    "difficulty": "High, pattern and kit",
     "language_barrier": {
-      "level": "None (Visual/Action only)",
-      "score": 0,
-      "details": "Pink Hour is a short action toy. Menus are minimal, stages are readable, and story is a wink. English or Japanese changes almost nothing in play. If you can parse a gun icon, you can play. This is a None on the radar's scale, useful as a proof that Japanese indies are not all visual novels."
+      "level": "Low (Basic UI/Menu)",
+      "score": 1,
+      "details": "English support exists on Steam builds; story is light. Stage names and chip/magic menus are the text. Japanese-only is still Low-to-Medium: you can play on patterns. Shop or chip misbuys are the risk. Combat is a visual exam. This is a comfortable action pickup if you can tolerate doujin UI density."
     },
-    "what_is_it": "Pink Hour is Studio Pixel's bite-sized run-and-gun set in the same dry corporate-frog neighborhood as Kero Blaster, built as a short, mean, almost arcade-cabinet night. You pick a route, shoot, die, and restart in minutes rather than evenings. It exists on Steam as both a companion piece and a statement: Pixel still likes games that end before your tea cools. Japanese players often buy it in a bundle mindset with Kero Blaster and Pink Heaven, treating the trio as a studio sampler. Overseas, it is easy to overlook because it does not look like a 20-hour Metroidvania. That is the point. The dossier is here because AdSense-era sites skip microgames, and skipping them is how you lie about Japanese indie culture. Not everything from Japan is a 40-hour JRPG with a language panic attack.",
-    "deep_dive_analysis": "A micro campaign forces honesty. There is no skill tree to hide weak corridors. Each screen is a verb exam: which gun, which jump, which enemy is actually a platform. Death is the tutorial, restart is the loop, and mastery is measured in clean clears rather than in lore flags. Compared with Kero Blaster, Pink Hour is denser and less interested in office-comedy connective tissue. Compared with Downwell, it is authored rather than rolled. The design lesson for overseas players is about Japanese doujin length: a complete thought can be ninety minutes. Steam pages that look 'too small' are often the ones Japanese action fans actually finish. Weapon feel still carries Pixel's recoil personality. If you bounce because there is no map to color in, you are asking the wrong question of a cabinet game. If you chase time attacks, you will find the real depth hiding in enemy placements that look cute until they are not. Pink Heaven exists as a sibling variation; this dossier focuses on Hour as the sharper snack.",
+    "what_is_it": "The Legend of Dark Witch is Inside System's doujin-style action series opener that Steam players find when they want a Japanese Mega Man cousin with a witch, a compact campaign, and a slightly stubborn UI. You run stages, earn tools, and learn that the cute sprite is lying about the boss's fairness. Japanese 2D action fans treat Inside System as part of the same conversation as other micro-studios who still believe in stage-select grammar. Overseas, it is easy to confuse with a hundred other pixel platformers. The difference is the Japanese doujin boss philosophy: readable if you are paying attention, rude if you are not, short enough to retry tonight. Later numbered entries exist; this dossier is the door. If Luna Nights is the Metroidvania mansion, Dark Witch is the stage-select cabinet with a broom.",
+    "deep_dive_analysis": "Stage-select action lives or dies on whether tools change rooms. Dark Witch wants you to bring the right kit to the right tyrant, then learn a pattern that was designed as a sentence, not as a health sponge. That is Mega Man literacy, which Japanese players often have in their bones and overseas players sometimes have to reconstruct. Shops and upgrades exist without turning the game into a 40-hour RPG. Compared with Kero Blaster, there is more 'which stage first' strategy and a different authorial joke. Compared with Crimzon Clover, you have platforms and a jump, not only a hitbox and a rank. Difficulty is honest about retries. Language does not save you from a bad pattern read. The Steam version's job is availability. The design's job is to remind a global audience that Japanese indie is allowed to be a short action game with a witch and a credit sequence. If you need a vast map to feel you got your money, you will underrate it. If you like finishing a thought, you will get it.",
     "why_trending_in_japan": [
       {
-        "title": "Bundle culture around Pixel shorts",
-        "details": "Japanese shoppers treat Pink Hour as part of a Pixel action set, not a standalone AAA pitch. It trends whenever Kero Blaster is on sale because people complete the set."
+        "title": "Stage-select nostalgia that still hurts",
+        "details": "Japanese action boards still recommend Dark Witch to people who miss Mega Man's homework without wanting a 2D-soulslike map."
       },
       {
-        "title": "Respect for games that end",
-        "details": "In recommendation threads that complain about padded indies, Pixel microgames get named as a palate cleanser. Short does not mean unfinished in this scene."
+        "title": "Inside System as a known doujin action label",
+        "details": "Sequels and numbered entries keep the first title in the set, the same way Pixel shorts cluster."
       },
       {
-        "title": "Score and clear clips travel",
-        "details": "A one-hour game is easy to screenshot as a full clear. That completion energy is social in a way a 60-hour JRPG save file is not."
+        "title": "Boss-retry culture",
+        "details": "Clips of a witch eating a pattern are easy to post. That is unglamorous, durable discoverability."
       }
     ],
-    "playtime_and_difficulty": "One to two hours to see the whole thought, longer if you hunt clean ranks. Difficulty is high per minute, low per calendar. Perfect for a commute if your nerves can take it.",
-    "target_audience": "Kero Blaster fans, arcade masochists, and readers who want a language-free Japanese action hit. Skip if you need narrative, RPG stats, or a weekend-sized map.",
-    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/407880/header.jpg?t=1666983952",
-    "steam_url": "https://store.steampowered.com/app/407880/",
-    "updated": "2026-08-26"
+    "playtime_and_difficulty": "Five to ten hours for a first clear with retries. High execution, low lore. Extra modes are for people who already speak the grammar.",
+    "target_audience": "Mega Man fans, doujin action tourists, Kero Blaster graduates. Skip if you need Metroidvania exploration or a novel.",
+    "steam_url": "https://store.steampowered.com/app/420770/",
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/420770/header.jpg?t=1764518050",
+    "updated": "2026-09-08"
   },
   {
     "appid": 851100,
     "slug": "touhou-luna-nights",
     "title": "Touhou Luna Nights",
-    "developer": "Team Ladybug, WSS playground",
+    "developer": "Team Ladybug",
     "release_year": 2019,
     "genres": [
       "Action",
@@ -361,49 +401,9 @@
     ],
     "playtime_and_difficulty": "Main mansion clear is about eight to twelve hours depending on completionism. Difficulty is medium: you will die to bosses, not to cheap pits as a baseline. Prior shmup or Metroidvania literacy helps. Optional challenge is real but not required for a story ending.",
     "target_audience": "Metroidvania players, Touhou-curious action fans, and anyone who wants Japanese 2D craft without a visual-novel reading load. Less ideal if you want an official ZUN shmup or a 30-hour RPG. Excellent Steam Deck candidate.",
-    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/851100/header.jpg?t=1787630377",
     "steam_url": "https://store.steampowered.com/app/851100/",
-    "updated": "2026-08-26"
-  },
-  {
-    "appid": 331440,
-    "slug": "legend-of-dark-witch",
-    "title": "bit Dungeon II",
-    "developer": "Kinto Games LLC",
-    "release_year": 2014,
-    "genres": [
-      "Action"
-    ],
-    "primary_genre": "Action",
-    "vibe": "Doujin mega-style witch, compact Japanese action homework",
-    "playtime_short": "5-10 hours",
-    "difficulty": "High, pattern and kit",
-    "language_barrier": {
-      "level": "Low (Basic UI/Menu)",
-      "score": 1,
-      "details": "English support exists on Steam builds; story is light. Stage names and chip/magic menus are the text. Japanese-only is still Low-to-Medium: you can play on patterns. Shop or chip misbuys are the risk. Combat is a visual exam. This is a comfortable action pickup if you can tolerate doujin UI density."
-    },
-    "what_is_it": "The Legend of Dark Witch is Inside System's doujin-style action series opener that Steam players find when they want a Japanese Mega Man cousin with a witch, a compact campaign, and a slightly stubborn UI. You run stages, earn tools, and learn that the cute sprite is lying about the boss's fairness. Japanese 2D action fans treat Inside System as part of the same conversation as other micro-studios who still believe in stage-select grammar. Overseas, it is easy to confuse with a hundred other pixel platformers. The difference is the Japanese doujin boss philosophy: readable if you are paying attention, rude if you are not, short enough to retry tonight. Later numbered entries exist; this dossier is the door. If Luna Nights is the Metroidvania mansion, Dark Witch is the stage-select cabinet with a broom.",
-    "deep_dive_analysis": "Stage-select action lives or dies on whether tools change rooms. Dark Witch wants you to bring the right kit to the right tyrant, then learn a pattern that was designed as a sentence, not as a health sponge. That is Mega Man literacy, which Japanese players often have in their bones and overseas players sometimes have to reconstruct. Shops and upgrades exist without turning the game into a 40-hour RPG. Compared with Kero Blaster, there is more 'which stage first' strategy and a different authorial joke. Compared with Crimzon Clover, you have platforms and a jump, not only a hitbox and a rank. Difficulty is honest about retries. Language does not save you from a bad pattern read. The Steam version's job is availability. The design's job is to remind a global audience that Japanese indie is allowed to be a short action game with a witch and a credit sequence. If you need a vast map to feel you got your money, you will underrate it. If you like finishing a thought, you will get it.",
-    "why_trending_in_japan": [
-      {
-        "title": "Stage-select nostalgia that still hurts",
-        "details": "Japanese action boards still recommend Dark Witch to people who miss Mega Man's homework without wanting a 2D-soulslike map."
-      },
-      {
-        "title": "Inside System as a known doujin action label",
-        "details": "Sequels and numbered entries keep the first title in the set, the same way Pixel shorts cluster."
-      },
-      {
-        "title": "Boss-retry culture",
-        "details": "Clips of a witch eating a pattern are easy to post. That is unglamorous, durable discoverability."
-      }
-    ],
-    "playtime_and_difficulty": "Five to ten hours for a first clear with retries. High execution, low lore. Extra modes are for people who already speak the grammar.",
-    "target_audience": "Mega Man fans, doujin action tourists, Kero Blaster graduates. Skip if you need Metroidvania exploration or a novel.",
-    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/331440/header.jpg?t=1683080778",
-    "steam_url": "https://store.steampowered.com/app/331440/",
-    "updated": "2026-08-26"
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/851100/header.jpg?t=1787630377",
+    "updated": "2026-09-08"
   },
   {
     "appid": 230700,
@@ -442,9 +442,9 @@
     ],
     "playtime_and_difficulty": "Twenty hours is optimistic for a confused first clear; forty is common with hint-averse pride. Difficulty is very high, but it is knowledge high more than execution high, though execution is still no joke. Use a hint guide only if you have already bounced for a week; the community considers spoiler timing a moral issue.",
     "target_audience": "Note-takers, old-school exploration fans, people who liked Tunic's manuals or Animal Well's opacity. Not for cozy players, not for anyone who needs a quest log. If you hated being lost in Symphony of the Night, do not start here.",
-    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/230700/header.jpg?t=1749102745",
     "steam_url": "https://store.steampowered.com/app/230700/",
-    "updated": "2026-08-26"
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/230700/header.jpg?t=1749102745",
+    "updated": "2026-09-08"
   },
   {
     "appid": 835430,
@@ -483,15 +483,16 @@
     ],
     "playtime_and_difficulty": "NIGORO's own ballpark for newcomers is roughly 20-30 hours; many take longer. Very high difficulty, knowledge-centric. A first play should be scheduled like a hobby, not a lunch-break game.",
     "target_audience": "La-Mulana graduates, puzzle-Metroidvania masochists, mythology note-takers. Do not gift this as a cozy elf game because Deedlit is also a labyrinth. Completely different religion.",
-    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/835430/header.jpg?t=1710992311",
     "steam_url": "https://store.steampowered.com/app/835430/",
-    "updated": "2026-08-26"
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/835430/header.jpg?t=1710992311",
+    "updated": "2026-09-08"
   },
   {
     "appid": 1061910,
+    "skip_steam": true,
     "slug": "wadanohara",
-    "title": "Metal: Hellsinger",
-    "developer": "The Outsiders",
+    "title": "Wadanohara and the Great Blue Sea",
+    "developer": "Deep-Sea Prisoner",
     "release_year": 2020,
     "genres": [
       "Adventure",
@@ -505,14 +506,14 @@
     "language_barrier": {
       "level": "High (Text-Heavy/Lore)",
       "score": 3,
-      "details": "English is available on the Steam version you should buy. This is a talking game: sea politics, familiar banter, endings. Japanese is the original internet-era voice. Combat is simple and Low barrier. The story is High. Screen translation will destroy tone. Use English. If you only mash through fights, you will not have played Wadanohara."
+      "details": "The original release is Japanese. Community and later official translations exist, but this is a talking game: sea politics, familiar banter, endings. Combat is simple and Low barrier. The story is High. Screen translation will destroy tone. Use a full English build if you can. If you only mash through fights, you will not have played Wadanohara."
     },
-    "what_is_it": "Wadanohara and the Great Blue Sea is a Japanese dark fairy-tale RPG about a sea witch, her familiars, and an ocean that is not a healing bath. It looks pastel. It is not Recettear cozy and it is not only horror, which is why it confuses store-tag tourists. You walk, you talk, you fight enough to remember it is an RPG, and you discover that cute sprites are a Japanese indie tactic as old as freeware. Japanese players who grew up on the original still argue about characters as if they were a book club. The Steam edition is the legal, overseas-reachable way to take that book club. It belongs next to Ib as 'do not trust the cute' and next to LiEat as 'RPG Maker-descended storytelling,' but the ocean setting and familiar-cast structure are its own flavor. If you wanted a language-free action game, you are on the wrong page of the radar.",
-    "deep_dive_analysis": "Cast is the system. Familiars are combat roles and relationship flags. Walking a map is mostly a visual-novel delivery device with random or placed fights as punctuation. Japanese dark-fairy design uses cuteness as a pacing tool: the crash lands harder if the first hour is bubbles. Compared with Corpse Party, there is more RPG furniture and a different flavor of despair. Compared with LiEat, the lies are less detective-chapter and more myth-and-loyalty. Endings and character fates are the metagame. A battle system that stayed too deep would steal time from the conversation the Japanese fanbase actually wants. That is a legitimate design choice, not a failure to be Dark Souls. Overseas players who grade only combat will miss the product. Language grade is High because names, loyalties, and who-you-believe are the lock-and-key. The English Steam build is how this dossier can recommend it in good faith to a global audience. If a future patch adds more voice or more UI icons, the story will still be the wall.",
+    "what_is_it": "Wadanohara and the Great Blue Sea is a Japanese dark fairy-tale RPG about a sea witch, her familiars, and an ocean that is not a healing bath. It looks pastel. It is not Recettear cozy and it is not only horror, which is why it confuses store-tag tourists. You walk, you talk, you fight enough to remember it is an RPG, and you discover that cute sprites are a Japanese indie tactic as old as freeware. Japanese players who grew up on the original still argue about characters as if they were a book club. The PC release — including the later Reboot — is the legal way to take that book club. It belongs next to Ib as 'do not trust the cute' and next to LiEat as 'RPG Maker-descended storytelling,' but the ocean setting and familiar-cast structure are its own flavor. If you wanted a language-free action game, you are on the wrong page of the radar.",
+    "deep_dive_analysis": "Cast is the system. Familiars are combat roles and relationship flags. Walking a map is mostly a visual-novel delivery device with random or placed fights as punctuation. Japanese dark-fairy design uses cuteness as a pacing tool: the crash lands harder if the first hour is bubbles. Compared with Corpse Party, there is more RPG furniture and a different flavor of despair. Compared with LiEat, the lies are less detective-chapter and more myth-and-loyalty. Endings and character fates are the metagame. A battle system that stayed too deep would steal time from the conversation the Japanese fanbase actually wants. That is a legitimate design choice, not a failure to be Dark Souls. Overseas players who grade only combat will miss the product. Language grade is High because names, loyalties, and who-you-believe are the lock-and-key. A complete English translation is how this dossier can recommend it in good faith to a global audience. If a future patch adds more voice or more UI icons, the story will still be the wall.",
     "why_trending_in_japan": [
       {
         "title": "Pastel-and-knife nostalgia",
-        "details": "The original web-era following never fully left. Steam gave it a place to recruit people who missed the first wave."
+        "details": "The original web-era following never fully left. Later PC re-releases gave it a place to recruit people who missed the first wave."
       },
       {
         "title": "Character-as-fandom is native",
@@ -525,15 +526,15 @@
     ],
     "playtime_and_difficulty": "Ten to eighteen hours depending on talk-speed and ending hunt. Combat is not the boss. Emotional difficulty is. Keep extra saves if you care about characters.",
     "target_audience": "Dark fairy-tale RPG fans, Ib graduates who want a longer cast, people who can read a script. Content notes: violence under cute art, tragedy, possible animal-familiar peril. Skip if you wanted a shmup or a physics wrecker.",
-    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1061910/header.jpg?t=1731933059",
-    "steam_url": "https://store.steampowered.com/app/1061910/",
-    "updated": "2026-08-26"
+    "header_image": "img/placeholder-header.svg",
+    "steam_url": "https://funamusea.itch.io/wadanohara",
+    "updated": "2026-09-08"
   },
   {
     "appid": 251270,
     "slug": "corpse-party",
     "title": "Corpse Party",
-    "developer": "GrisGris",
+    "developer": "Team GrisGris",
     "release_year": 2016,
     "genres": [
       "Horror",
@@ -566,9 +567,9 @@
     ],
     "playtime_and_difficulty": "Ten to eighteen hours for a conscientious first run with some bad ends. Higher if you collect them on purpose. Difficulty is attention and stomach, not twitch. Multiple saves are not optional.",
     "target_audience": "Players who want Japanese school horror with full narrative weight. Not for the faint, not for anyone who needs action combat, not for a cozy night. Content notes: graphic violence against teens, ghosts, despair.",
-    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/251270/header.jpg?t=1740426499",
     "steam_url": "https://store.steampowered.com/app/251270/",
-    "updated": "2026-08-26"
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/251270/header.jpg?t=1740426499",
+    "updated": "2026-09-08"
   },
   {
     "appid": 1901370,
@@ -607,15 +608,15 @@
     ],
     "playtime_and_difficulty": "Three to six hours, longer if you hunt endings. Mechanical difficulty is low; attention difficulty is medium. A walkthrough will rob you of the only combat the game has: your choices.",
     "target_audience": "Adventure-horror players, RPG Maker history fans, people who like Little Nightmares' vibe but want Japanese gallery surrealism. Not a combat RPG. Content note: child protagonist in peril, unreality, implied death.",
-    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1901370/header.jpg?t=1779842056",
     "steam_url": "https://store.steampowered.com/app/1901370/",
-    "updated": "2026-08-26"
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1901370/header.jpg?t=1779842056",
+    "updated": "2026-09-08"
   },
   {
     "appid": 483980,
     "slug": "mad-father",
     "title": "Mad Father",
-    "developer": "sen",
+    "developer": "Sen",
     "release_year": 2016,
     "genres": [
       "Horror",
@@ -648,15 +649,15 @@
     ],
     "playtime_and_difficulty": "Five to nine hours. Medium difficulty: chases plus reading. Multiple endings add replays. Not a 40-hour RPG. Emotional difficulty can exceed mechanical difficulty.",
     "target_audience": "Story-horror players, RPG Maker canon hunters, people who want Japanese indie horror with a family-sized tragedy. Content notes: medical gore, child peril, parental abuse themes in fiction. Skip if you only wanted cute ghosts.",
-    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/483980/header.jpg?t=1779842400",
     "steam_url": "https://store.steampowered.com/app/483980/",
-    "updated": "2026-08-26"
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/483980/header.jpg?t=1779842400",
+    "updated": "2026-09-08"
   },
   {
-    "appid": 1113850,
+    "appid": 691450,
     "slug": "misao",
-    "title": "Sanguine Soul",
-    "developer": "Dead Level, Mitchelson Brooks, Louis McTague, Tony Cuni, Emilio Alban, Mary Ellis, Nicolas Witthoeft, Carly Hasson, Daniel Dabdoub, Dylan Rodrigues, Kaelee Feliciano, Joe Colombo, Elliott Bailey-Wills, Edwin Sanchez",
+    "title": "Misao",
+    "developer": "Sen",
     "release_year": 2017,
     "genres": [
       "Horror",
@@ -689,9 +690,9 @@
     ],
     "playtime_and_difficulty": "Four to eight hours, more with ending hunts. Medium: some chases, lots of flags. A walkthrough will finish the map and empty the conversation.",
     "target_audience": "Players who liked Mad Father or want school horror without Corpse Party's full franchise weight. Content notes: bullying, violence, ghost imagery, student peril.",
-    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1113850/header.jpg?t=1579736527",
-    "steam_url": "https://store.steampowered.com/app/1113850/",
-    "updated": "2026-08-26"
+    "steam_url": "https://store.steampowered.com/app/691450/",
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/691450/header.jpg?t=1735191987",
+    "updated": "2026-09-08"
   },
   {
     "appid": 511640,
@@ -732,13 +733,13 @@
     "target_audience": "Psychological horror readers, RPG Maker story fans, people who want Japanese urban dread. Content notes: mental health themes, suicide-adjacent despair, ghost imagery. Skip if you wanted action or slapstick traps.",
     "header_image": "https://cdn.akamai.steamstatic.com/steam/apps/511640/header.jpg",
     "steam_url": "https://store.steampowered.com/app/511640/",
-    "updated": "2026-08-26"
+    "updated": "2026-09-08"
   },
   {
-    "appid": 1113870,
+    "appid": 885810,
     "slug": "witchs-house-mv",
-    "title": "Time Travelling Blues",
-    "developer": "Tunnel Vision Studio",
+    "title": "The Witch's House MV",
+    "developer": "Fummy",
     "release_year": 2018,
     "genres": [
       "Horror",
@@ -771,15 +772,15 @@
     ],
     "playtime_and_difficulty": "Four to eight hours with deaths. High frustration if you refuse to save. Low mechanical skill floor, high suspicion floor. Hint guides exist; using one early will flatten the only joke.",
     "target_audience": "Puzzle-horror masochists, RPG Maker tourists, fans of cruel adventure games. Not for children despite the fairy look. Not for players who rage at unfair deaths that were actually labeled.",
-    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1113870/header.jpg?t=1783530927",
-    "steam_url": "https://store.steampowered.com/app/1113870/",
-    "updated": "2026-08-26"
+    "steam_url": "https://store.steampowered.com/app/885810/",
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/885810/header.jpg?t=1772601594",
+    "updated": "2026-09-08"
   },
   {
     "appid": 650700,
     "slug": "yume-nikki",
     "title": "Yume Nikki",
-    "developer": "kikiyama",
+    "developer": "Kikiyama",
     "release_year": 2018,
     "genres": [
       "Horror",
@@ -812,9 +813,50 @@
     ],
     "playtime_and_difficulty": "You can wander for two hours or twenty. A guided effect hunt is shorter; a blind walk is the intended mood. Mechanical difficulty is near zero. Psychological and navigational difficulty is the product. No combat tax.",
     "target_audience": "Explorers, atmospheric horror fans, people who liked the vibe of LSD Dream Emulator conversations or modern walking sims. Skip if you need combat, plot, or a map marker. Content note: surreal imagery, isolation, occasional shock sprites.",
-    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/650700/header.jpg?t=1779843132",
     "steam_url": "https://store.steampowered.com/app/650700/",
-    "updated": "2026-08-26"
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/650700/header.jpg?t=1779843132",
+    "updated": "2026-09-08"
+  },
+  {
+    "appid": 373770,
+    "slug": "lieat",
+    "title": "LiEat",
+    "developer": "2nd Creed",
+    "release_year": 2016,
+    "genres": [
+      "JRPG",
+      "Adventure"
+    ],
+    "primary_genre": "JRPG",
+    "vibe": "Cozy turn-based JRPG about a dragon who eats lies",
+    "playtime_short": "8-14 hours",
+    "difficulty": "Low-medium",
+    "language_barrier": {
+      "level": "Medium (Screen Translation OK)",
+      "score": 2,
+      "details": "English is available and is the correct way to play overseas. This is a story JRPG: town talk, mystery chapters, battle menus. Japanese-only is High. Battles themselves are Low: commands are short. The Medium grade with English reflects chapter mysteries that live in dialogue. Screen translation can finish fights and still fail the plot, which is the product."
+    },
+    "what_is_it": "LiEat is a Japanese RPG Maker-era JRPG about Leo, a dragon in human-ish trouble, who eats lies and stumbles through chapter-sized mysteries with a small cast. It is gentle compared with the horror cluster on this radar, which is exactly why Japanese players still gift it to people who say they only like cute RPGs. Turn-based fights exist. They are not the point. The point is a traveling detective-fairy-tale tone, town-by-town lies, and a dragon who is not a world-ending power fantasy. Steam is how overseas players found a title that used to live in freeware folklore. It is shorter than Recettear's debt calendar and far less cruel than La-Mulana. If your image of Japanese indie is only ghosts and bullets, LiEat is the correction: there is also a tradition of small, authored JRPGs that want you to listen.",
+    "deep_dive_analysis": "Chapter structure is the design. Each stop is a lie-ecosystem: NPCs, a local problem, a combat kit that is allowed to stay simple so that conversation can stay in front. The eat-lies conceit is a narrative key more than a Darkest Dungeon stress meter, though it still changes how you read every townsperson. Battles are traditional RPG Maker grammar: party, skills, not a eight-hour job system. Japanese players who recommend LiEat are usually recommending tone. Compared with Recettear, there is no eviction timer. Compared with Genso Wanderer, there is no tile-hunger. The difficulty is paying attention to people. That sounds soft until a chapter ending recontextualizes a joke. Multiple episodes on Steam should be treated as one dossier object: a serialized small JRPG. Quality of localization matters more here than in Downwell; if your English build is the known good one, use it. If you skip text, you are playing a mediocre random-encounter toy and you will wrongly think Japanese cozy RPGs have nothing to say.",
+    "why_trending_in_japan": [
+      {
+        "title": "The anti-horror gift RPG",
+        "details": "Japanese lists of healing or gentle games still include LiEat as a palate cleanser after Sen and GrisGris. That pairing is a trend engine."
+      },
+      {
+        "title": "Dragon-eats-lies is a perfect pitch",
+        "details": "One sentence that is also a mechanic. People remember it, so the Steam page keeps getting new first-time reviews years later."
+      },
+      {
+        "title": "RPG Maker JRPG craft without shame",
+        "details": "Players defend it as writing-first. In a market of asset-flip RPGs, that defense is evergreen."
+      }
+    ],
+    "playtime_and_difficulty": "Eight to fourteen hours across the serialized story depending on which episodes you own and how much you talk. Low-medium combat. The real difficulty is emotional spoilers if someone else talks.",
+    "target_audience": "Cozy JRPG players, mystery-light fans, people scared off by this site's horror row. Skip if you want action, shop tycoons, or bullet hell.",
+    "steam_url": "https://store.steampowered.com/app/373770/",
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/373770/header.jpg?t=1779843208",
+    "updated": "2026-09-08"
   },
   {
     "appid": 70400,
@@ -853,56 +895,15 @@
     ],
     "playtime_and_difficulty": "A first successful debt clearance is often 15-20 hours if you learn haggling. Failure loops add time. Dungeon combat is modest; the real difficulty is planning. Not a twitch game. Spreadsheet-brained players have an edge.",
     "target_audience": "People who like shop sims, light dungeon crawling, and comedy JRPGs. Perfect if you want Japanese indie history with a full English script. Avoid if you hate timers, capitalism jokes, or talking to customers.",
-    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/70400/header.jpg?t=1447353479",
     "steam_url": "https://store.steampowered.com/app/70400/",
-    "updated": "2026-08-26"
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/70400/header.jpg?t=1447353479",
+    "updated": "2026-09-08"
   },
   {
-    "appid": 470110,
-    "slug": "lieat",
-    "title": "Short Peace",
-    "developer": "2nd Creed",
-    "release_year": 2016,
-    "genres": [
-      "JRPG",
-      "Adventure"
-    ],
-    "primary_genre": "JRPG",
-    "vibe": "Cozy turn-based JRPG about a dragon who eats lies",
-    "playtime_short": "8-14 hours",
-    "difficulty": "Low-medium",
-    "language_barrier": {
-      "level": "Medium (Screen Translation OK)",
-      "score": 2,
-      "details": "English is available and is the correct way to play overseas. This is a story JRPG: town talk, mystery chapters, battle menus. Japanese-only is High. Battles themselves are Low: commands are short. The Medium grade with English reflects chapter mysteries that live in dialogue. Screen translation can finish fights and still fail the plot, which is the product."
-    },
-    "what_is_it": "LiEat is a Japanese RPG Maker-era JRPG about Leo, a dragon in human-ish trouble, who eats lies and stumbles through chapter-sized mysteries with a small cast. It is gentle compared with the horror cluster on this radar, which is exactly why Japanese players still gift it to people who say they only like cute RPGs. Turn-based fights exist. They are not the point. The point is a traveling detective-fairy-tale tone, town-by-town lies, and a dragon who is not a world-ending power fantasy. Steam is how overseas players found a title that used to live in freeware folklore. It is shorter than Recettear's debt calendar and far less cruel than La-Mulana. If your image of Japanese indie is only ghosts and bullets, LiEat is the correction: there is also a tradition of small, authored JRPGs that want you to listen.",
-    "deep_dive_analysis": "Chapter structure is the design. Each stop is a lie-ecosystem: NPCs, a local problem, a combat kit that is allowed to stay simple so that conversation can stay in front. The eat-lies conceit is a narrative key more than a Darkest Dungeon stress meter, though it still changes how you read every townsperson. Battles are traditional RPG Maker grammar: party, skills, not a eight-hour job system. Japanese players who recommend LiEat are usually recommending tone. Compared with Recettear, there is no eviction timer. Compared with Genso Wanderer, there is no tile-hunger. The difficulty is paying attention to people. That sounds soft until a chapter ending recontextualizes a joke. Multiple episodes on Steam should be treated as one dossier object: a serialized small JRPG. Quality of localization matters more here than in Downwell; if your English build is the known good one, use it. If you skip text, you are playing a mediocre random-encounter toy and you will wrongly think Japanese cozy RPGs have nothing to say.",
-    "why_trending_in_japan": [
-      {
-        "title": "The anti-horror gift RPG",
-        "details": "Japanese lists of healing or gentle games still include LiEat as a palate cleanser after Sen and GrisGris. That pairing is a trend engine."
-      },
-      {
-        "title": "Dragon-eats-lies is a perfect pitch",
-        "details": "One sentence that is also a mechanic. People remember it, so the Steam page keeps getting new first-time reviews years later."
-      },
-      {
-        "title": "RPG Maker JRPG craft without shame",
-        "details": "Players defend it as writing-first. In a market of asset-flip RPGs, that defense is evergreen."
-      }
-    ],
-    "playtime_and_difficulty": "Eight to fourteen hours across the serialized story depending on which episodes you own and how much you talk. Low-medium combat. The real difficulty is emotional spoilers if someone else talks.",
-    "target_audience": "Cozy JRPG players, mystery-light fans, people scared off by this site's horror row. Skip if you want action, shop tycoons, or bullet hell.",
-    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/470110/header.jpg?t=1551317529",
-    "steam_url": "https://store.steampowered.com/app/470110/",
-    "updated": "2026-08-26"
-  },
-  {
-    "appid": 702050,
+    "appid": 931500,
     "slug": "touhou-genso-wanderer-reloaded",
-    "title": "The Song of Saya",
-    "developer": "Nitroplus",
+    "title": "Touhou Genso Wanderer Reloaded",
+    "developer": "Aqua Style",
     "release_year": 2017,
     "genres": [
       "JRPG",
@@ -935,9 +936,9 @@
     ],
     "playtime_and_difficulty": "Twenty hours is a serious campaign start; forty is plausible with extra dungeons. Medium-high: knowledge of mystery-dungeon etiquette matters. Continues and grinding exist; pride is optional.",
     "target_audience": "Mystery Dungeon fans, Touhou fans who want a JRPG-shaped stay, inventory nerds. Skip if you only wanted action platforming or a language-free well.",
-    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/702050/header.jpg?t=1778231826",
-    "steam_url": "https://store.steampowered.com/app/702050/",
-    "updated": "2026-08-26"
+    "steam_url": "https://store.steampowered.com/app/931500/",
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/931500/header.jpg?t=1710781564",
+    "updated": "2026-09-08"
   },
   {
     "appid": 360740,
@@ -976,15 +977,15 @@
     ],
     "playtime_and_difficulty": "You can finish a descent in a few hours of attempts. Mastery and high-style runs are endless. Difficulty is high but round length is low, so it is punishing without being a weekend hostage. Accessibility is limited: this is a timing game. Color and silhouette are clear, but reaction speed is the tax.",
     "target_audience": "Roguelite players who like action more than decks, arcade score chasers, and anyone who wants a Japanese indie with zero story homework. Not for players who need a plot, a map, or a relaxing cozy loop. Excellent as a Steam Deck one-more-floor title.",
-    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/360740/header.jpg?t=1769028721",
     "steam_url": "https://store.steampowered.com/app/360740/",
-    "updated": "2026-08-26"
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/360740/header.jpg?t=1769028721",
+    "updated": "2026-09-08"
   },
   {
     "appid": 266210,
     "slug": "one-way-heroics",
     "title": "One Way Heroics",
-    "developer": "Smoking WOLF",
+    "developer": "SmokingWOLF",
     "release_year": 2014,
     "genres": [
       "JRPG",
@@ -1017,8 +1018,8 @@
     ],
     "playtime_and_difficulty": "A successful run can be a couple of hours once you are literate; getting literate is many funerals. High systems difficulty, moderate execution. Plus editions add more, not less, homework.",
     "target_audience": "Roguelike RPG fans, PLAYISM-era tourists, people who like a visible clock. Skip if you hate permadeath or menu reading.",
-    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/266210/header.jpg?t=1728470787",
     "steam_url": "https://store.steampowered.com/app/266210/",
-    "updated": "2026-08-26"
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/266210/header.jpg?t=1728470787",
+    "updated": "2026-09-08"
   }
 ]

@@ -1,6 +1,6 @@
 [
   {
-    "appid": 470110,
+    "appid": 373770,
     "slug": "lieat",
     "title": "LiEat",
     "developer": "2nd Creed",
@@ -36,9 +36,10 @@
   },
   {
     "appid": 1061910,
+    "skip_steam": true,
     "slug": "wadanohara",
     "title": "Wadanohara and the Great Blue Sea",
-    "developer": "Sundae Parade",
+    "developer": "Deep-Sea Prisoner",
     "release_year": 2020,
     "genres": ["Adventure", "Horror", "JRPG"],
     "primary_genre": "Adventure",
@@ -48,14 +49,14 @@
     "language_barrier": {
       "level": "High (Text-Heavy/Lore)",
       "score": 3,
-      "details": "English is available on the Steam version you should buy. This is a talking game: sea politics, familiar banter, endings. Japanese is the original internet-era voice. Combat is simple and Low barrier. The story is High. Screen translation will destroy tone. Use English. If you only mash through fights, you will not have played Wadanohara."
+      "details": "The original release is Japanese. Community and later official translations exist, but this is a talking game: sea politics, familiar banter, endings. Combat is simple and Low barrier. The story is High. Screen translation will destroy tone. Use a full English build if you can. If you only mash through fights, you will not have played Wadanohara."
     },
-    "what_is_it": "Wadanohara and the Great Blue Sea is a Japanese dark fairy-tale RPG about a sea witch, her familiars, and an ocean that is not a healing bath. It looks pastel. It is not Recettear cozy and it is not only horror, which is why it confuses store-tag tourists. You walk, you talk, you fight enough to remember it is an RPG, and you discover that cute sprites are a Japanese indie tactic as old as freeware. Japanese players who grew up on the original still argue about characters as if they were a book club. The Steam edition is the legal, overseas-reachable way to take that book club. It belongs next to Ib as 'do not trust the cute' and next to LiEat as 'RPG Maker-descended storytelling,' but the ocean setting and familiar-cast structure are its own flavor. If you wanted a language-free action game, you are on the wrong page of the radar.",
-    "deep_dive_analysis": "Cast is the system. Familiars are combat roles and relationship flags. Walking a map is mostly a visual-novel delivery device with random or placed fights as punctuation. Japanese dark-fairy design uses cuteness as a pacing tool: the crash lands harder if the first hour is bubbles. Compared with Corpse Party, there is more RPG furniture and a different flavor of despair. Compared with LiEat, the lies are less detective-chapter and more myth-and-loyalty. Endings and character fates are the metagame. A battle system that stayed too deep would steal time from the conversation the Japanese fanbase actually wants. That is a legitimate design choice, not a failure to be Dark Souls. Overseas players who grade only combat will miss the product. Language grade is High because names, loyalties, and who-you-believe are the lock-and-key. The English Steam build is how this dossier can recommend it in good faith to a global audience. If a future patch adds more voice or more UI icons, the story will still be the wall.",
+    "what_is_it": "Wadanohara and the Great Blue Sea is a Japanese dark fairy-tale RPG about a sea witch, her familiars, and an ocean that is not a healing bath. It looks pastel. It is not Recettear cozy and it is not only horror, which is why it confuses store-tag tourists. You walk, you talk, you fight enough to remember it is an RPG, and you discover that cute sprites are a Japanese indie tactic as old as freeware. Japanese players who grew up on the original still argue about characters as if they were a book club. The PC release — including the later Reboot — is the legal way to take that book club. It belongs next to Ib as 'do not trust the cute' and next to LiEat as 'RPG Maker-descended storytelling,' but the ocean setting and familiar-cast structure are its own flavor. If you wanted a language-free action game, you are on the wrong page of the radar.",
+    "deep_dive_analysis": "Cast is the system. Familiars are combat roles and relationship flags. Walking a map is mostly a visual-novel delivery device with random or placed fights as punctuation. Japanese dark-fairy design uses cuteness as a pacing tool: the crash lands harder if the first hour is bubbles. Compared with Corpse Party, there is more RPG furniture and a different flavor of despair. Compared with LiEat, the lies are less detective-chapter and more myth-and-loyalty. Endings and character fates are the metagame. A battle system that stayed too deep would steal time from the conversation the Japanese fanbase actually wants. That is a legitimate design choice, not a failure to be Dark Souls. Overseas players who grade only combat will miss the product. Language grade is High because names, loyalties, and who-you-believe are the lock-and-key. A complete English translation is how this dossier can recommend it in good faith to a global audience. If a future patch adds more voice or more UI icons, the story will still be the wall.",
     "why_trending_in_japan": [
       {
         "title": "Pastel-and-knife nostalgia",
-        "details": "The original web-era following never fully left. Steam gave it a place to recruit people who missed the first wave."
+        "details": "The original web-era following never fully left. Later PC re-releases gave it a place to recruit people who missed the first wave."
       },
       {
         "title": "Character-as-fandom is native",
@@ -67,6 +68,8 @@
       }
     ],
     "playtime_and_difficulty": "Ten to eighteen hours depending on talk-speed and ending hunt. Combat is not the boss. Emotional difficulty is. Keep extra saves if you care about characters.",
-    "target_audience": "Dark fairy-tale RPG fans, Ib graduates who want a longer cast, people who can read a script. Content notes: violence under cute art, tragedy, possible animal-familiar peril. Skip if you wanted a shmup or a physics wrecker."
+    "target_audience": "Dark fairy-tale RPG fans, Ib graduates who want a longer cast, people who can read a script. Content notes: violence under cute art, tragedy, possible animal-familiar peril. Skip if you wanted a shmup or a physics wrecker.",
+    "header_image": "img/placeholder-header.svg",
+    "steam_url": "https://funamusea.itch.io/wadanohara"
   }
 ]

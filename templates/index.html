@@ -39,7 +39,7 @@
     {% for game in games %}
     <article class="card" data-genres="{{ game.genres | join(' ') | lower }}">
       <a href="games/{{ game.slug }}.html">
-        <img src="{{ game.header_image }}" alt="{{ game.title }} key art" width="616" height="353" loading="lazy">
+        <img src="{{ game.header_image | media_url(root_prefix) }}" alt="{{ game.title }} key art" width="616" height="353" loading="lazy">
         <div class="card-body">
           <div class="card-meta">
             <span class="badge">{{ game.primary_genre }}</span>

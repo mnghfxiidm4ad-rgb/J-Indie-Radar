@@ -1,6 +1,62 @@
 """Gemini prompt used to generate AdSense-ready English dossiers."""
 
-GEMINI_MODEL_DEFAULT = "gemini-1.5-flash"
+import json
+
+# gemini-1.5-flash was shut down in 2025. Prefer current Flash aliases.
+GEMINI_MODEL_DEFAULT = "gemini-3.5-flash"
+GEMINI_MODEL_FALLBACKS = (
+    "gemini-3.5-flash",
+    "gemini-3.6-flash",
+    "gemini-3.1-flash-lite",
+    "gemini-flash-latest",
+    "gemini-2.5-flash",
+)
+
+LANGUAGE_LEVELS = (
+    "None (Visual/Action only)",
+    "Low (Basic UI/Menu)",
+    "Medium (Screen Translation OK)",
+    "High (Text-Heavy/Lore)",
+)
+
+DOSSIER_SCHEMA = {
+    "type": "OBJECT",
+    "properties": {
+        "vibe": {"type": "STRING"},
+        "what_is_it": {"type": "STRING"},
+        "deep_dive_analysis": {"type": "STRING"},
+        "why_trending_in_japan": {
+            "type": "ARRAY",
+            "items": {
+                "type": "OBJECT",
+                "properties": {
+                    "title": {"type": "STRING"},
+                    "details": {"type": "STRING"},
+                },
+                "required": ["title", "details"],
+            },
+        },
+        "language_barrier": {
+            "type": "OBJECT",
+            "properties": {
+                "level": {"type": "STRING", "enum": list(LANGUAGE_LEVELS)},
+                "details": {"type": "STRING"},
+            },
+            "required": ["level", "details"],
+        },
+        "playtime_and_difficulty": {"type": "STRING"},
+        "target_audience": {"type": "STRING"},
+    },
+    "required": [
+        "vibe",
+        "what_is_it",
+        "deep_dive_analysis",
+        "why_trending_in_japan",
+        "language_barrier",
+        "playtime_and_difficulty",
+        "target_audience",
+    ],
+}
 
 SYSTEM_PROMPT = """You are a senior English-language games critic specializing in Japanese indie, doujin, JRPG, horror, and 2D action design.
 
@@ -47,3 +103,15 @@ Japanese user-review sample (themes only; do not quote verbatim at length):
 {reviews_ja}
 
 Write the JSON dossier now."""
+
+
+def repair_prompt(previous: dict, errors: list[str]) -> str:
+    raw = previous.get("_raw")
+    body = raw if raw else json.dumps(previous, ensure_ascii=False, indent=2)
+    return f"""The previous JSON failed validation:
+{chr(10).join("- " + err for err in errors)}
+
+Previous output:
+{body}
+
+Return ONLY corrected JSON matching the schema. Expand what_is_it to 150-200 English words and deep_dive_analysis to at least 200 English words if those failed. Keep mechanical truth. Do not invent patch dates, review percentages, or quotes."""
