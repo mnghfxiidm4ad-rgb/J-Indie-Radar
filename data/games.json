@@ -574,6 +574,47 @@
     "source": "gemini"
   },
   {
+    "appid": 512180,
+    "slug": "nightshade",
+    "title": "Nightshade/百花百狼",
+    "developer": "Red Entertainment, LANTERN ROOMS",
+    "release_year": 2017,
+    "genres": [
+      "Adventure"
+    ],
+    "primary_genre": "Adventure",
+    "vibe": "Melancholic Sengoku Espionage Romance",
+    "playtime_short": "Approximately 25 to 30 hours to unlock all endin",
+    "difficulty": "Approximately 25 to 30 hours to unlock all endin",
+    "language_barrier": {
+      "level": "None (Visual/Action only)",
+      "details": "The Steam release officially supports full English text localization alongside the original Japanese voice acting. Players do not need any Japanese reading skills to fully enjoy the game, though the opening and ending movie songs default to English versions in the Steam release.",
+      "score": 0
+    },
+    "what_is_it": "Nightshade (百花百狼) is a historical-fantasy otome visual novel set in the Sengoku Period, following the unification of Japan. Players take on the role of Enju, a young shinobi-in-training from the Koga clan. When framed for the assassination of Toyotomi Hideyoshi, Enju becomes a fugitive hunted by allies and enemies alike. The gameplay consists of classic visual novel branching dialogue trees that lead to distinct character routes with five major love interests, including historical figures like Hattori Hanzo and Ishikawa Goemon. Unlike softer romance games, it features high-stakes ninja action, political betrayal, and a high casualty rate. It is fully voiced in Japanese with high-quality illustrations by the prominent artist Teita, emphasizing a dramatic, somber atmosphere where survival is just as uncertain as love.",
+    "deep_dive_analysis": "Mechanically, Nightshade operates on a narrative branching structure split into two distinct thematic halves. After a shared common route that establishes Enju's relationships and the core inciting incident, the narrative diverges based on which character's route is chosen. This divergence divides the game into two major mechanical/tonal tracks: the 'Escape Route' and the 'Tragedy Route.' In some character branches (like Chojiro and Gekkamaru), the system forces the player into grueling gauntlets where peripheral characters are systematically killed off, reinforcing the hopeless, disposable nature of historical shinobi. In other routes (like Hanzo and Goemon), the writing balances the tension with proactive agency. The game teaches players the strict codes of the Sengoku era through its fail-states; making choices that favor traditional modern emotional honesty often leads to sudden, brutal Bad Ends. Instead, survival requires understanding the complex socio-political obligations of the characters. Notably, the game handles Enju's growth dynamically; in certain routes, particularly Hanzo's, her character portrait and combat standing shift from a helpless liability to an active combatant, showing rare integration of heroine agency within a highly restrictive historical-fantasy framework.",
+    "why_trending_in_japan": [
+      {
+        "title": "The Hanzo Phenomenon",
+        "details": "Among Japanese players, the depiction of Hattori Hanzo transcended typical otome archetype expectations. Critics and fans widely praise his route as a masterclass in mature romance, where the relationship is built on mutual professional respect, combat training, and emotional maturity rather than instant attraction, making his route an enduring benchmark for the genre."
+      },
+      {
+        "title": "Debates Over Optimal Route Ordering",
+        "details": "The Japanese community remains highly active in discussing the 'canonical' or emotionally optimal playthrough order. Because the narrative reveals differing layers of the conspiracy behind Hideyoshi's death, players strongly debate whether to tackle the lighter, high-agency routes (Goemon/Hanzo) first, or plunge straight into the tragic, high-casualty routes (Chojiro/Gekkamaru) to maximize the story's emotional weight."
+      },
+      {
+        "title": "Re-evaluation of the Bitter Tragedies",
+        "details": "While mainstream otome games often favor sweet, low-stakes romantic fluff, domestic players appreciate Nightshade for its refusal to pull punches. The community frequently discusses the 'Kintaro-ame' (repetitive structural) feel of some bad ends, but concludes that the sheer cruelty and inevitability of the ninja setting create a bittersweet aesthetic that feels authentically historical."
+      }
+    ],
+    "playtime_and_difficulty": "Approximately 25 to 30 hours to unlock all endings, including the highly sought-after Platinum achievement equivalent (full CG and bad end recovery). Difficulty is low in terms of mechanics, but high in narrative brutality; players using no guide will frequently hit tragic bad ends due to subtle, non-obvious choice consequences.",
+    "target_audience": "Perfect for players who love historical fiction, high-stakes political intrigue, and bittersweet romances where characters must choose between duty and love. Skip it if you want a lighthearted, slice-of-life romance without violence or heavy tragedy.",
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/512180/header.jpg?t=1782115860",
+    "steam_url": "https://store.steampowered.com/app/512180/",
+    "updated": "2026-09-09",
+    "source": "gemini"
+  },
+  {
     "appid": 1061910,
     "skip_steam": true,
     "slug": "wadanohara",
@@ -1068,6 +1109,92 @@
     "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1584090/header.jpg?t=1788596587",
     "steam_url": "https://store.steampowered.com/app/1584090/",
     "updated": "2026-09-08",
+    "source": "gemini"
+  },
+  {
+    "appid": 2150660,
+    "slug": "touhou-new-world",
+    "title": "Touhou: New World",
+    "developer": "Ankake Spa",
+    "release_year": 2023,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "RPG"
+    ],
+    "primary_genre": "JRPG",
+    "vibe": "Isometric Touhou Bullet-Hell Action-RPG",
+    "playtime_short": "Completing a single character's campaign takes r",
+    "difficulty": "Completing a single character's campaign takes r",
+    "language_barrier": {
+      "level": "None (Visual/Action only)",
+      "details": "The game features full English text localization. Menu layouts, quest logs, and item comparisons are incredibly straightforward, requiring no Japanese knowledge whatsoever to enjoy the game or optimize character builds.",
+      "score": 0
+    },
+    "what_is_it": "Developed by the veteran doujin circle Ankake Spa, Touhou: New World is an isometric, top-down action-RPG that serves as the spiritual successor to Touhou Koukishin (Adventures of Scarlet Curiosity). Playing as either the shrine maiden Reimu Hakurei or the ordinary magician Marisa Kirisame, players navigate three-dimensional environments filled with dense, colorful bullet-hell patterns translated from traditional 2D shoot-'em-ups. The gameplay loop centers on clearing short, instanced stages, engaging in spectacular boss battles with iconic Gensokyo residents, and farming randomized equipment to optimize character stats. Combat merges standard physical attacks with powerful spell card skills on individual cooldown timers, backed by a high-stakes defensive parry system. Outside of combat, players return to a central hub area to buy upgrades, accept side quests, and interact with the local cast, making this an accessible entry point that blends classic hack-and-slash elements with authentic Touhou danmaku intensity.",
+    "deep_dive_analysis": "Mechanically, Touhou: New World shifts away from its predecessor's SP-based resource management system to individual, cooldown-based spell cards. While this design choice ensures players can regularly deploy flashy techniques, it eliminates tactical player-agency; you can no longer conserve resources for rapid-fire skill combinations during a boss's vulnerable shield-break state. The defensive framework centers around a Just Guard mechanic. Timing a block perfectly triggers a localized time-slow effect that creates brief windows for retaliation. However, this mechanic is often undermined by the screen-filling nature of bullet-hell patterns, where many projectile types cannot be guarded, leading to frustrating spikes of RNG damage. The loot and gear progression loop also feels underwhelming; weapon and armor drops feature randomized numeric values, but unique named drops have fixed stats that are quickly outclassed by generic items. Furthermore, the UI lacks bulk-selling options, making inventory management tedious. Finally, the physics engine features a minor but noticeable input delay and slide momentum. This lack of pixel-perfect precision makes navigating complex bullet configurations on foot difficult, frequently forcing players to rely on brute-force healing skills instead of true mechanical evasion.",
+    "why_trending_in_japan": [
+      {
+        "title": "The Ankake Spa Legacy and High Expectations",
+        "details": "Japanese doujin gamers hold Ankake Spa in incredibly high regard due to their historical masterworks like Yoiyoki Kengeki Musou and Touhou Koukishin. Because this release serves as the official spiritual successor after nearly a decade, the domestic community hyper-analyzed its mechanical evolution, sparking heated debates regarding whether the new systems live up to the studio's legendary legacy."
+      },
+      {
+        "title": "Controversial Shift in Combat Dynamics and Pacing",
+        "details": "A major talking point among Japanese players is the transition from smooth, animation-cancelling action to a stiffer, cooldown-focused system. Experienced action game fans express frustration over the inability to cancel attack strings with jumps or dashes, arguing that the game feels slower and less expressive than its predecessor, while casual players appreciate the simpler flow."
+      },
+      {
+        "title": "The High-Quality DLC Redemption",
+        "details": "Despite mixed feelings regarding the base game's campaign design, the Japanese community has widely praised the post-launch DLC. By adding eight highly requested playable characters—including Youmu and Flandre—and designing creative, mechanically distinct stages that deviate from the main game's repetitive structures, the DLC significantly redeemed the title for hardcore Touhou enthusiasts."
+      }
+    ],
+    "playtime_and_difficulty": "Completing a single character's campaign takes roughly 6 to 8 hours, while finishing both protagonists and the extensive DLC easily pushes playtime past 25 hours. The difficulty is highly customizable, ranging from casual button-mashing to 'Lunatic' bullet-hell, though some late-game bosses feature sharp, frustrating damage spikes.",
+    "target_audience": "This is a great fit for dedicated Touhou Project fans who want to see their favorite characters realized in a fully voiced, 3D setting, and action-RPG players looking for a light, Ys-lite experience. It should be skipped by players who demand precise, high-speed character action mechanics, deep dungeon crawling, or complex loot progression.",
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2150660/header.jpg?t=1750958891",
+    "steam_url": "https://store.steampowered.com/app/2150660/",
+    "updated": "2026-09-09",
+    "source": "gemini"
+  },
+  {
+    "appid": 845880,
+    "slug": "touhou-scarlet-curiosity",
+    "title": "Touhou: Scarlet Curiosity",
+    "developer": "Ankake Spa",
+    "release_year": 2018,
+    "genres": [
+      "Action",
+      "RPG"
+    ],
+    "primary_genre": "JRPG",
+    "vibe": "Mid-2000s Falcom-Style Action RPG",
+    "playtime_short": "A single campaign run takes about 4 to 6 hours, ",
+    "difficulty": "A single campaign run takes about 4 to 6 hours, ",
+    "language_barrier": {
+      "level": "None (Visual/Action only)",
+      "details": "The game features full official English support. Even if played in Japanese, the UI relies on highly intuitive genre staples: sword icons denote attack power, color-coded numbers indicate stat changes on gear, and stage select screens are entirely visual.",
+      "score": 0
+    },
+    "what_is_it": "Touhou: Scarlet Curiosity is a vibrant, isometric, stage-based action RPG starring the vampire Remilia Scarlet and her elegant maid Sakuya Izayoi. Drawing heavy structural and mechanical inspiration from classic 3D Falcom titles like Ys VI, The Oath in Felghana, and Ys Origin, this title transitions the traditional bullet-hell patterns of the Touhou Project franchise into a fast-paced, real-time hack-and-slash format. Players run, jump, and unleash specialized, character-specific skills through expansive 3D environments, hunting down an elusive, mysterious giant monster while gathering randomized, color-coded loot to boost their stats. Progression is driven by experience levels, equipment drops with varied prefixes, and unlocking customizable skill slots that allow players to change their offensive loadouts on the fly. The game emphasizes aerial mobility and crowd control, presenting players with dense waves of enemies that fire slow-moving, colorful projectile patterns. Designed originally as a doujin title, it focuses on high-speed combat and nostalgic presentation, bridging the gap between bullet-hell arcade design and accessible, level-based console action-adventure design.",
+    "deep_dive_analysis": "Mechanically, Scarlet Curiosity is a lightweight looter-slasher wrapped in a platform-action template. It divides its gameplay loop between mob clearing, platform exploration, and boss encounters designed to mimic danmaku (bullet hell) patterns. However, the system design suffers from a core tension between its level-based RPG math and its action aspirations. Players find that the equipment drop rates and level-ups quickly trivialize the difficulty curves; high-tier loot drops allow players to overpower encounters via stat-checking rather than mastering execution. The combat feel differs significantly between the two protagonists. Remilia acts as a high-speed brawler who can exploit jump-cancel movement quirks (similar to classic Castlevania mechanics) to fly through long stages, while Sakuya acts as a multi-hit combo specialist whose lack of high-speed traversal tools makes her feel sluggish on the game's expansive, occasionally oversized maps. Stage design features wide-open spaces that try to capture the scale of Gensokyo, but static camera angles paired with aggressive graphical bloom frequently obscure small enemies and incoming projectiles. This visual noise, combined with a camera that struggles to show what is directly beneath or in front of the player during downward-scrolling segments, shifts boss fights away from precise dodging toward aggressive trade-blow strategies fueled by generous healing item drops.",
+    "why_trending_in_japan": [
+      {
+        "title": "Nostalgic Ys-Like Design Appeal",
+        "details": "Japanese players immediately recognized the core loop and game feel as a loving homage to the mid-2000s engine used in Ys VI, Oath in Felghana, and Ys Origin. This specific mechanical template—characterized by snappy jumping, directional attack strings, and top-down isometric platforming—resonates deeply with veteran PC doujin gamers who grew up with that era of Japanese action RPG design."
+      },
+      {
+        "title": "Remilia's High-Speed Traversal Quirks",
+        "details": "The game gained unexpected attention online for Remilia's movement mechanics. Players discovered that jumping and attacking in rapid succession allows her to bunny-hop at absurd speeds across stages. This exploit, compared affectionately by the Japanese community to 'Akumajo Dracula' speedrunning techniques, turned what could have been tedious backtracking into a hilarious, highly satisfying optimization meta-game."
+      },
+      {
+        "title": "Accessible Entry Point for Touhou Fans",
+        "details": "While core action enthusiasts find the base difficulty too easy and the late-game grind somewhat repetitive, the Japanese audience highly values the game as a casual, stress-free 'Chara-Ge' (character game). For fans who struggle with the brutal difficulty of official Touhou bullet-hell shooters, this offers an atmospheric, beautifully scored alternative to experience the world of the Scarlet Devil Mansion without the intense mechanical gatekeeping."
+      }
+    ],
+    "playtime_and_difficulty": "A single campaign run takes about 4 to 6 hours, while achieving the True Ending and completing the post-game dungeon for both characters pushes playtime closer to 12-14 hours. The default difficulty is very easy due to generous item drops and level scaling, though players seeking a challenge can enable 'Danmaku Hell Mode' in the external launcher settings.",
+    "target_audience": "Buy this if you love the PS2/PSP era of Ys games, want a cozy and casual Touhou fangame with great music, and enjoy simple action-RPG loops. Skip this if you expect complex character action, hate fixed camera perspectives that hide enemies off-screen, or want an intricate, deep end-game progression system.",
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/845880/header.jpg?t=1751395467",
+    "steam_url": "https://store.steampowered.com/app/845880/",
+    "updated": "2026-09-09",
     "source": "gemini"
   },
   {
