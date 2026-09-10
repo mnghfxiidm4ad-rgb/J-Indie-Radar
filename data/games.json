@@ -615,6 +615,48 @@
     "source": "gemini"
   },
   {
+    "appid": 702050,
+    "slug": "the-song-of-saya",
+    "title": "The Song of Saya",
+    "developer": "Nitroplus",
+    "release_year": 2019,
+    "genres": [
+      "Adventure",
+      "Simulation"
+    ],
+    "primary_genre": "Adventure",
+    "vibe": "Chamber-Scale Lovecraftian Body Horror",
+    "playtime_short": "Approximately 3 to 5 hours to complete all three",
+    "difficulty": "Approximately 3 to 5 hours to complete all three",
+    "language_barrier": {
+      "level": "Medium (Screen Translation OK)",
+      "details": "The Steam release officially supports English, Simplified Chinese, and Korean. However, because it lacks official native Japanese text support, Japanese players or those wishing to play in the original Japanese language will need to apply unofficial community localization patches or use real-time screen translation tools to restore the original script.",
+      "score": 2
+    },
+    "what_is_it": "The Song of Saya (Saya no Uta) is a seminal 2003 psychological horror visual novel written by Gen Urobuchi and developed by Nitroplus, presented here in its remastered Steam release. The story follows Fuminori Sakisaka, a medical student who survives a horrific car crash only to suffer from severe psychomorphic agnosia. To his broken senses, the entire world has transformed into a living, pulsating landscape of rotting meat, viscera, and putrid odors, while his fellow humans appear as grotesque, gibbering monsters. His only respite in this waking nightmare is Saya, a mysterious girl who appears to him as a normal, beautiful human, but is actually an otherworldly entity beyond human comprehension. The gameplay is minimalist and linear, focusing on reading prose interspersed with rare, critical decision branches that lead to three distinct, tragic endings. The mechanical core relies on the tension between subjective horror and objective reality, forcing players to navigate Fuminori's descent into madness and moral compromise.",
+    "deep_dive_analysis": "The mechanical genius of The Song of Saya lies in its brilliant use of dualistic aesthetic presentation to create cognitive dissonance in the player. The game operates on a harsh visual and auditory contrast: Fuminori's perspective is rendered in putrid reds, squelching wet sound effects, and disturbing industrial ambient tracks, while Saya's presence introduces soft, delicate acoustic tones and pristine anime aesthetics. By anchoring the player's perspective to Fuminori, the narrative forces an alignment with his warped priorities; the player naturally begins to dread the appearance of 'normal' human characters who represent screaming, ugly interruptions to the serene, quiet space Fuminori shares with Saya. The decision branches are sparse but carry massive mechanical weight, functioning as moral tripwires rather than simple path-selectors. Every choice tests how far the player is willing to alienate Fuminori from humanity to protect his fragile sanctuary. The writing relies on deep intertextual references to Osamu Tezuka's 'Phoenix' (specifically the Resurrection Arc) and classic Lovecraftian tropes, reframing cosmic dread not as an external threat to be vanquished, but as a cozy, intimate refuge from an unbearable reality. The pacing is incredibly tight, eschewing the typical visual novel padding to deliver a concentrated, high-impact narrative that functions like a tragic, three-act play.",
+    "why_trending_in_japan": [
+      {
+        "title": "Legacy of Gen Urobuchi's Masterpiece",
+        "details": "Japanese players hold immense reverence for this title as the definitive early work of writer Gen Urobuchi before his mainstream breakthrough with Madoka Magica. The game is celebrated for its highly literary exploration of 'distorted love' and the philosophical question of whether subjective happiness in a delusion is preferable to objective misery in reality, sparking deep thematic debates decades after its initial release."
+      },
+      {
+        "title": "Frustration Over Missing Japanese Language Options",
+        "details": "Despite being an iconic domestic PC game, Japanese users express significant frustration regarding regional licensing issues on Steam, where the native Japanese text is officially unavailable or requires complex workarounds. This has led to a wave of defensive reviews lamenting that a Japanese cultural landmark cannot be easily enjoyed in its original language on modern digital storefronts."
+      },
+      {
+        "title": "Enduring Affection for Saya as an Anti-Heroine",
+        "details": "There is a persistent, affectionate paradox in how the community treats the character of Saya. Players routinely contrast her deeply monstrous, parasitic nature with her absolute, pure devotion to Fuminori, viewing her not as a traditional monster to be feared, but as a tragic romantic lead whose love is both destructive and strangely comforting to those feeling isolated by society."
+      }
+    ],
+    "playtime_and_difficulty": "Approximately 3 to 5 hours to complete all three narrative routes. There is no gameplay difficulty or active puzzle-solving, but players should use a guide if they wish to easily experience all endings without repetitive backtracking through the text choices.",
+    "target_audience": "Perfect for fans of psychological horror, tragic visual novels, cosmic dread, and dark romance. Absolutely skip this if you are sensitive to extreme body horror, graphic violence, psychological abuse, or themes of moral degradation.",
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/702050/header.jpg?t=1778231826",
+    "steam_url": "https://store.steampowered.com/app/702050/",
+    "updated": "2026-09-10",
+    "source": "gemini"
+  },
+  {
     "appid": 1061910,
     "skip_steam": true,
     "slug": "wadanohara",
