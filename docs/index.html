@@ -46,13 +46,19 @@
       </nav>
     </div>
   </header>
-  <main id="main"><section class="hero">
+  <main id="main"><section class="hero" aria-labelledby="hero-title">
   <div class="wrap">
     <p class="kicker">Japan-made indie intelligence</p>
-    <h1>Discover Hidden Japanese Indie Gems &amp; Untranslated Classics</h1>
-    <p class="lede">Structured English dossiers on Japanese Steam indies: why they exploded in Japan, how bad the language barrier really is, and what the systems are doing beneath the pixel art. Built for overseas players who want more than a store-page paragraph.</p>
+    <h1 id="hero-title">Discover Hidden Japanese Indie Gems &amp; Untranslated Classics</h1>
+    <p class="lede">We curate Japanese Steam indies the way players in Japan actually argue about them: systems first, the real language barrier second, and store blurbs last.</p>
+    <p class="hero-copy">This is an editorial radar, not a capsule wall. Each dossier is an original English read for someone outside Japan who is tired of a header image and a one-line store description. We spell out why a title blew up in Japanese reviews, how bad the language barrier really is, and what the systems are doing under the pixel art — a gun that loses levels when you get hit, a rumor engine that rewrites a school ghost story, or a shop ledger that is the whole JRPG. If a game is only cute, we say so. If you will be stuck without Japanese, we grade that before you buy.</p>
+    <ul class="hero-points">
+      <li><strong>Language-barrier grades.</strong> None, Low, Medium, or High, with what you can actually finish without reading Japanese.</li>
+      <li><strong>Systems, not vibes.</strong> The loop after the trailer: resources, fail states, and the trick the store page skips.</li>
+      <li><strong>Why Japan cared.</strong> The local recommendation logic, written for players who were not in that conversation.</li>
+    </ul>
     <div class="hero-actions">
-      <a class="btn btn-primary" href="#catalog">Browse the radar</a>
+      <a class="btn btn-primary" href="#picks">Read the picks</a>
       <a class="btn btn-ghost" href="about.html">Editorial policy</a>
     </div>
   </div>
@@ -72,7 +78,53 @@
     </script>
   </aside>
 </div>
-<section class="wrap" id="catalog">
+<section class="wrap picks" id="picks" aria-labelledby="picks-title">
+  <header class="section-head">
+    <p class="kicker">Editor's radar</p>
+    <h2 id="picks-title">Picks worth opening first</h2>
+    <p class="section-copy">Two dossiers we would hand someone who has ten minutes and wants a reason to click. The lead is the opening of the piece, not a store-page paraphrase.</p>
+  </header>
+  <div class="featured-grid">
+    <article class="feature-card">
+      <a class="feature-media" href="games/cave-story-plus.html">
+        <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/200900/23d8972e068689b1d688f20972fa343813e0431f/header.jpg?t=1781395150" alt="Cave Story+ key art" width="616" height="353" loading="eager" fetchpriority="high">
+      </a>
+      <div class="feature-body">
+        <div class="badge-row">
+          <span class="badge">Action</span>
+          <span class="badge badge-muted">8-14 hours</span>
+          <span class="badge badge-muted">Low barrier barrier</span>
+        </div>
+        <h3><a href="games/cave-story-plus.html">Cave Story+</a></h3>
+        <p class="byline"><time datetime="2026-09-08">Updated 8 Sep 2026</time> · Studio Pixel</p>
+        <p class="excerpt">Cave Story+ is Studio Pixel&#39;s expanded commercial build of Cave Story, the freeware action-adventure that quietly rewired how a generation of Japanese and…</p>
+        <a class="btn btn-primary" href="games/cave-story-plus.html">Read article</a>
+      </div>
+    </article>
+    <article class="feature-card">
+      <a class="feature-media" href="games/yume-nikki.html">
+        <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/650700/header.jpg?t=1779843132" alt="Yume Nikki key art" width="616" height="353" loading="lazy">
+      </a>
+      <div class="feature-body">
+        <div class="badge-row">
+          <span class="badge">Horror</span>
+          <span class="badge badge-muted">8-20 hours (no compass)</span>
+          <span class="badge badge-muted">No Japanese needed barrier</span>
+        </div>
+        <h3><a href="games/yume-nikki.html">Yume Nikki</a></h3>
+        <p class="byline"><time datetime="2026-09-08">Updated 8 Sep 2026</time> · Kikiyama</p>
+        <p class="excerpt">Yume Nikki is Kikiyama&#39;s dream explorer: a shut-in named Madotsuki naps, wanders collective-unconscious neighborhoods, collects effects that change her…</p>
+        <a class="btn btn-primary" href="games/yume-nikki.html">Read article</a>
+      </div>
+    </article>
+  </div>
+</section>
+<section class="wrap" id="catalog" aria-labelledby="catalog-title">
+  <header class="section-head">
+    <p class="kicker">The catalog</p>
+    <h2 id="catalog-title">Dossiers, with the argument on the card</h2>
+    <p class="section-copy">Filter by genre. Every card shows the playtime estimate, the language-barrier grade, the last revision date, and a short original excerpt so you can tell the pieces apart before you open one.</p>
+  </header>
   <div class="toolbar" role="tablist" aria-label="Genre filters">
     <button class="filter-btn is-active" data-filter="all" type="button">All</button>
     <button class="filter-btn" data-filter="jrpg" type="button">JRPG</button>
@@ -83,420 +135,516 @@
   </div>
   <div class="grid">
     <article class="card" data-genres="action adventure">
-      <a href="games/cave-story-plus.html">
+      <a class="card-media" href="games/cave-story-plus.html">
         <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/200900/23d8972e068689b1d688f20972fa343813e0431f/header.jpg?t=1781395150" alt="Cave Story+ key art" width="616" height="353" loading="lazy">
-        <div class="card-body">
-          <div class="card-meta">
-            <span class="badge">Action</span>
-            <span>Studio Pixel</span>
-          </div>
-          <h2>Cave Story+</h2>
-          <p>16-bit Metroidvania with a handmade Japanese soul</p>
-        </div>
       </a>
+      <div class="card-body">
+        <div class="badge-row">
+          <span class="badge">Action</span>
+          <span class="badge badge-muted">8-14 hours</span>
+          <span class="badge badge-muted">Low barrier barrier</span>
+          <time class="card-date" datetime="2026-09-08">Updated 8 Sep 2026</time>
+        </div>
+        <h3><a href="games/cave-story-plus.html">Cave Story+</a></h3>
+        <p class="excerpt">Cave Story+ is Studio Pixel&#39;s expanded commercial build of Cave Story, the freeware action-adventure that quietly rewired how a generation of Japanese and Western developers think about solo-authored 2D games. You play a silent robot who…</p>
+        <a class="card-more" href="games/cave-story-plus.html">Continue reading<span class="sr-only">: Cave Story+</span></a>
+      </div>
     </article>
     <article class="card" data-genres="action">
-      <a href="games/crimzon-clover.html">
+      <a class="card-media" href="games/crimzon-clover.html">
         <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/285440/header.jpg?t=1729476866" alt="Crimzon Clover WORLD IGNITION key art" width="616" height="353" loading="lazy">
-        <div class="card-body">
-          <div class="card-meta">
-            <span class="badge">Action</span>
-            <span>Yotsubane</span>
-          </div>
-          <h2>Crimzon Clover WORLD IGNITION</h2>
-          <p>Doujin shmup, break-to-win, Japanese arcade brain</p>
-        </div>
       </a>
+      <div class="card-body">
+        <div class="badge-row">
+          <span class="badge">Action</span>
+          <span class="badge badge-muted">2-6 hours to loop literacy</span>
+          <span class="badge badge-muted">No Japanese needed barrier</span>
+          <time class="card-date" datetime="2026-09-08">Updated 8 Sep 2026</time>
+        </div>
+        <h3><a href="games/crimzon-clover.html">Crimzon Clover WORLD IGNITION</a></h3>
+        <p class="excerpt">Crimzon Clover WORLD IGNITION is Yotsubane&#39;s doujin shoot-em-up brought to Steam: a vertical bullet-hell about breaking enemies into score, riding a rank that wants to eat you, and looking like a cabinet game that escaped a…</p>
+        <a class="card-more" href="games/crimzon-clover.html">Continue reading<span class="sr-only">: Crimzon Clover WORLD IGNITION</span></a>
+      </div>
     </article>
     <article class="card" data-genres="action adventure">
-      <a href="games/ender-lilies.html">
+      <a class="card-media" href="games/ender-lilies.html">
         <img src="https://cdn.akamai.steamstatic.com/steam/apps/1458790/header.jpg" alt="ENDER LILIES: Quietus of the Knights key art" width="616" height="353" loading="lazy">
-        <div class="card-body">
-          <div class="card-meta">
-            <span class="badge">Action</span>
-            <span>Live Wire</span>
-          </div>
-          <h2>ENDER LILIES: Quietus of the Knights</h2>
-          <p>Rain-soaked soulslike Metroidvania, Japanese melancholy action</p>
-        </div>
       </a>
+      <div class="card-body">
+        <div class="badge-row">
+          <span class="badge">Action</span>
+          <span class="badge badge-muted">12-20 hours</span>
+          <span class="badge badge-muted">Low barrier barrier</span>
+          <time class="card-date" datetime="2026-09-08">Updated 8 Sep 2026</time>
+        </div>
+        <h3><a href="games/ender-lilies.html">ENDER LILIES: Quietus of the Knights</a></h3>
+        <p class="excerpt">ENDER LILIES is Live Wire&#39;s 2D action RPG about a small priestess, Lily, who walks a ruined land, purifies the last knights, and equips their ghosts as skills. It looks like a European dark fantasy postcard…</p>
+        <a class="card-more" href="games/ender-lilies.html">Continue reading<span class="sr-only">: ENDER LILIES: Quietus of the Knights</span></a>
+      </div>
     </article>
     <article class="card" data-genres="action adventure">
-      <a href="games/ender-magnolia.html">
+      <a class="card-media" href="games/ender-magnolia.html">
         <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2725260/header.jpg?t=1740447961" alt="ENDER MAGNOLIA: Bloom in the Mist key art" width="616" height="353" loading="lazy">
-        <div class="card-body">
-          <div class="card-meta">
-            <span class="badge">Action</span>
-            <span>Live Wire</span>
-          </div>
-          <h2>ENDER MAGNOLIA: Bloom in the Mist</h2>
-          <p>Homunculi, fumes, and a sharper sequel-language action RPG</p>
-        </div>
       </a>
+      <div class="card-body">
+        <div class="badge-row">
+          <span class="badge">Action</span>
+          <span class="badge badge-muted">15-25 hours</span>
+          <span class="badge badge-muted">Low barrier barrier</span>
+          <time class="card-date" datetime="2026-09-08">Updated 8 Sep 2026</time>
+        </div>
+        <h3><a href="games/ender-magnolia.html">ENDER MAGNOLIA: Bloom in the Mist</a></h3>
+        <p class="excerpt">ENDER MAGNOLIA is Live Wire&#39;s return to the rain-and-ruin family, now in the Land of Fumes with Lilac, an Attuner who can save or at least walk beside homunculi that industry and poison drove mad. It…</p>
+        <a class="card-more" href="games/ender-magnolia.html">Continue reading<span class="sr-only">: ENDER MAGNOLIA: Bloom in the Mist</span></a>
+      </div>
     </article>
     <article class="card" data-genres="action adventure">
-      <a href="games/giga-wrecker-alt.html">
+      <a class="card-media" href="games/giga-wrecker-alt.html">
         <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/454410/header.jpg?t=1553785513" alt="GIGA WRECKER ALT. key art" width="616" height="353" loading="lazy">
-        <div class="card-body">
-          <div class="card-meta">
-            <span class="badge">Action</span>
-            <span>Game Freak</span>
-          </div>
-          <h2>GIGA WRECKER ALT.</h2>
-          <p>Physics-wrecking 2D action from an unexpected Japanese lab</p>
-        </div>
       </a>
+      <div class="card-body">
+        <div class="badge-row">
+          <span class="badge">Action</span>
+          <span class="badge badge-muted">8-14 hours</span>
+          <span class="badge badge-muted">Low barrier barrier</span>
+          <time class="card-date" datetime="2026-09-08">Updated 8 Sep 2026</time>
+        </div>
+        <h3><a href="games/giga-wrecker-alt.html">GIGA WRECKER ALT.</a></h3>
+        <p class="excerpt">GIGA WRECKER ALT. is Game Freak&#39;s 2D action experiment about a protagonist who smashes a wrecked world with a gadget that treats debris as both weapon and platform. It is a strange object on this radar…</p>
+        <a class="card-more" href="games/giga-wrecker-alt.html">Continue reading<span class="sr-only">: GIGA WRECKER ALT.</span></a>
+      </div>
     </article>
     <article class="card" data-genres="action">
-      <a href="games/kero-blaster.html">
+      <a class="card-media" href="games/kero-blaster.html">
         <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/292500/header.jpg?t=1728281051" alt="Kero Blaster key art" width="616" height="353" loading="lazy">
-        <div class="card-body">
-          <div class="card-meta">
-            <span class="badge">Action</span>
-            <span>Studio Pixel</span>
-          </div>
-          <h2>Kero Blaster</h2>
-          <p>Frog salaryman run-and-gun, Pixel-tight</p>
-        </div>
       </a>
+      <div class="card-body">
+        <div class="badge-row">
+          <span class="badge">Action</span>
+          <span class="badge badge-muted">4-7 hours</span>
+          <span class="badge badge-muted">Low barrier barrier</span>
+          <time class="card-date" datetime="2026-09-08">Updated 8 Sep 2026</time>
+        </div>
+        <h3><a href="games/kero-blaster.html">Kero Blaster</a></h3>
+        <p class="excerpt">Kero Blaster is Studio Pixel&#39;s run-and-gun about a frog in a beige company universe who is sent to shoot problems because that is what the job ticket says. Stages are compact, guns are distinct, and the…</p>
+        <a class="card-more" href="games/kero-blaster.html">Continue reading<span class="sr-only">: Kero Blaster</span></a>
+      </div>
     </article>
     <article class="card" data-genres="action indie free to play">
-      <a href="games/pink-heaven.html">
+      <a class="card-media" href="games/pink-heaven.html">
         <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/409690/header.jpg?t=1729065205" alt="Pink Heaven key art" width="616" height="353" loading="lazy">
-        <div class="card-body">
-          <div class="card-meta">
-            <span class="badge">Action</span>
-            <span>Studio Pixel</span>
-          </div>
-          <h2>Pink Heaven</h2>
-          <p>Charming Retro 8-Bit Platformer Spinoff</p>
-        </div>
       </a>
+      <div class="card-body">
+        <div class="badge-row">
+          <span class="badge">Action</span>
+          <span class="badge badge-muted">10 to 15 minutes for a single casual run; 1</span>
+          <span class="badge badge-muted">No Japanese needed barrier</span>
+          <time class="card-date" datetime="2026-09-08">Updated 8 Sep 2026</time>
+        </div>
+        <h3><a href="games/pink-heaven.html">Pink Heaven</a></h3>
+        <p class="excerpt">Pink Heaven is a bite-sized, free-to-play 2D side-scrolling platformer developed by the legendary Studio Pixel, the creator of Cave Story. Serving as a promotional companion piece and compatibility checker for Kero Blaster, as well as a…</p>
+        <a class="card-more" href="games/pink-heaven.html">Continue reading<span class="sr-only">: Pink Heaven</span></a>
+      </div>
     </article>
     <article class="card" data-genres="action">
-      <a href="games/pink-hour.html">
+      <a class="card-media" href="games/pink-hour.html">
         <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/409670/header.jpg?t=1729065126" alt="Pink Hour key art" width="616" height="353" loading="lazy">
-        <div class="card-body">
-          <div class="card-meta">
-            <span class="badge">Action</span>
-            <span>Studio Pixel</span>
-          </div>
-          <h2>Pink Hour</h2>
-          <p>Micro run-and-gun snack from Pixel&#39;s frog universe</p>
-        </div>
       </a>
+      <div class="card-body">
+        <div class="badge-row">
+          <span class="badge">Action</span>
+          <span class="badge badge-muted">1-2 hours</span>
+          <span class="badge badge-muted">No Japanese needed barrier</span>
+          <time class="card-date" datetime="2026-09-08">Updated 8 Sep 2026</time>
+        </div>
+        <h3><a href="games/pink-hour.html">Pink Hour</a></h3>
+        <p class="excerpt">Pink Hour is Studio Pixel&#39;s bite-sized run-and-gun set in the same dry corporate-frog neighborhood as Kero Blaster, built as a short, mean, almost arcade-cabinet night. You pick a route, shoot, die, and restart in minutes rather…</p>
+        <a class="card-more" href="games/pink-hour.html">Continue reading<span class="sr-only">: Pink Hour</span></a>
+      </div>
     </article>
     <article class="card" data-genres="action adventure">
-      <a href="games/deedlit-in-wonder-labyrinth.html">
+      <a class="card-media" href="games/deedlit-in-wonder-labyrinth.html">
         <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1203630/header.jpg?t=1774922378" alt="Record of Lodoss War: Deedlit in Wonder Labyrinth key art" width="616" height="353" loading="lazy">
-        <div class="card-body">
-          <div class="card-meta">
-            <span class="badge">Action</span>
-            <span>Team Ladybug</span>
-          </div>
-          <h2>Record of Lodoss War: Deedlit in Wonder Labyrinth</h2>
-          <p>Licensed Metroidvania with elemental stance dancing</p>
-        </div>
       </a>
+      <div class="card-body">
+        <div class="badge-row">
+          <span class="badge">Action</span>
+          <span class="badge badge-muted">7-11 hours</span>
+          <span class="badge badge-muted">Low barrier barrier</span>
+          <time class="card-date" datetime="2026-09-08">Updated 8 Sep 2026</time>
+        </div>
+        <h3><a href="games/deedlit-in-wonder-labyrinth.html">Record of Lodoss War: Deedlit in Wonder Labyrinth</a></h3>
+        <p class="excerpt">Deedlit in Wonder Labyrinth is Team Ladybug applying their Castlevania-like craft to Record of Lodoss War, with the high elf Deedlit exploring a sealed labyrinth that remixes classic monsters and companions. The hook is not the…</p>
+        <a class="card-more" href="games/deedlit-in-wonder-labyrinth.html">Continue reading<span class="sr-only">: Record of Lodoss War: Deedlit in Wonder Labyrinth</span></a>
+      </div>
     </article>
     <article class="card" data-genres="action">
-      <a href="games/legend-of-dark-witch.html">
+      <a class="card-media" href="games/legend-of-dark-witch.html">
         <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/420770/header.jpg?t=1764518050" alt="The Legend of Dark Witch key art" width="616" height="353" loading="lazy">
-        <div class="card-body">
-          <div class="card-meta">
-            <span class="badge">Action</span>
-            <span>Inside System</span>
-          </div>
-          <h2>The Legend of Dark Witch</h2>
-          <p>Doujin mega-style witch, compact Japanese action homework</p>
-        </div>
       </a>
+      <div class="card-body">
+        <div class="badge-row">
+          <span class="badge">Action</span>
+          <span class="badge badge-muted">5-10 hours</span>
+          <span class="badge badge-muted">Low barrier barrier</span>
+          <time class="card-date" datetime="2026-09-08">Updated 8 Sep 2026</time>
+        </div>
+        <h3><a href="games/legend-of-dark-witch.html">The Legend of Dark Witch</a></h3>
+        <p class="excerpt">The Legend of Dark Witch is Inside System&#39;s doujin-style action series opener that Steam players find when they want a Japanese Mega Man cousin with a witch, a compact campaign, and a slightly stubborn UI. You…</p>
+        <a class="card-more" href="games/legend-of-dark-witch.html">Continue reading<span class="sr-only">: The Legend of Dark Witch</span></a>
+      </div>
     </article>
     <article class="card" data-genres="action adventure">
-      <a href="games/touhou-luna-nights.html">
+      <a class="card-media" href="games/touhou-luna-nights.html">
         <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/851100/header.jpg?t=1787630377" alt="Touhou Luna Nights key art" width="616" height="353" loading="lazy">
-        <div class="card-body">
-          <div class="card-meta">
-            <span class="badge">Action</span>
-            <span>Team Ladybug</span>
-          </div>
-          <h2>Touhou Luna Nights</h2>
-          <p>Time-stopping Metroidvania in a fangame mansion</p>
-        </div>
       </a>
+      <div class="card-body">
+        <div class="badge-row">
+          <span class="badge">Action</span>
+          <span class="badge badge-muted">8-12 hours</span>
+          <span class="badge badge-muted">Low barrier barrier</span>
+          <time class="card-date" datetime="2026-09-08">Updated 8 Sep 2026</time>
+        </div>
+        <h3><a href="games/touhou-luna-nights.html">Touhou Luna Nights</a></h3>
+        <p class="excerpt">Touhou Luna Nights is Team Ladybug&#39;s Metroidvania set in a distorted Scarlet Devil Mansion, with Sakuya Izayoi as the player character whose time-stop is both a combat tool and a platforming verb. It is an unofficial…</p>
+        <a class="card-more" href="games/touhou-luna-nights.html">Continue reading<span class="sr-only">: Touhou Luna Nights</span></a>
+      </div>
     </article>
     <article class="card" data-genres="action adventure">
-      <a href="games/la-mulana.html">
+      <a class="card-media" href="games/la-mulana.html">
         <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/230700/header.jpg?t=1749102745" alt="La-Mulana key art" width="616" height="353" loading="lazy">
-        <div class="card-body">
-          <div class="card-meta">
-            <span class="badge">Adventure</span>
-            <span>NIGORO</span>
-          </div>
-          <h2>La-Mulana</h2>
-          <p>Archaeological punishment Metroidvania</p>
-        </div>
       </a>
+      <div class="card-body">
+        <div class="badge-row">
+          <span class="badge">Adventure</span>
+          <span class="badge badge-muted">20-40 hours</span>
+          <span class="badge badge-muted">Medium barrier barrier</span>
+          <time class="card-date" datetime="2026-09-08">Updated 8 Sep 2026</time>
+        </div>
+        <h3><a href="games/la-mulana.html">La-Mulana</a></h3>
+        <p class="excerpt">La-Mulana is NIGORO&#39;s archaeological ruin crawler, a remake of an MSX-homage freeware original, in which professor-adventurer Lemeza Kosugi whips his way through a stacked underworld of tablets, traps, and bosses while the game refuses to hold…</p>
+        <a class="card-more" href="games/la-mulana.html">Continue reading<span class="sr-only">: La-Mulana</span></a>
+      </div>
     </article>
     <article class="card" data-genres="action adventure">
-      <a href="games/la-mulana-2.html">
+      <a class="card-media" href="games/la-mulana-2.html">
         <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/835430/header.jpg?t=1710992311" alt="La-Mulana 2 key art" width="616" height="353" loading="lazy">
-        <div class="card-body">
-          <div class="card-meta">
-            <span class="badge">Adventure</span>
-            <span>NIGORO</span>
-          </div>
-          <h2>La-Mulana 2</h2>
-          <p>Widescreen ruin sequel, still a trap seminar</p>
-        </div>
       </a>
+      <div class="card-body">
+        <div class="badge-row">
+          <span class="badge">Adventure</span>
+          <span class="badge badge-muted">25-40 hours</span>
+          <span class="badge badge-muted">Medium barrier barrier</span>
+          <time class="card-date" datetime="2026-09-08">Updated 8 Sep 2026</time>
+        </div>
+        <h3><a href="games/la-mulana-2.html">La-Mulana 2</a></h3>
+        <p class="excerpt">La-Mulana 2 follows Lumisa Kosugi into Eg-Lana, a second stacked ruin designed for widescreen and for people who thought the first game needed more mythology. NIGORO kept the no-tutorial religion and spent the extra fidelity on…</p>
+        <a class="card-more" href="games/la-mulana-2.html">Continue reading<span class="sr-only">: La-Mulana 2</span></a>
+      </div>
     </article>
     <article class="card" data-genres="action adventure indie">
-      <a href="games/lost-ruins.html">
+      <a class="card-media" href="games/lost-ruins.html">
         <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1306630/header.jpg?t=1699433832" alt="Lost Ruins key art" width="616" height="353" loading="lazy">
-        <div class="card-body">
-          <div class="card-meta">
-            <span class="badge">Adventure</span>
-            <span>ALTARI GAMES</span>
-          </div>
-          <h2>Lost Ruins</h2>
-          <p>Deliberate and Deadly Gothic-Anime Survival Platformer</p>
-        </div>
       </a>
+      <div class="card-body">
+        <div class="badge-row">
+          <span class="badge">Adventure</span>
+          <span class="badge badge-muted">A standard playthrough takes about 6 to 8 hours,</span>
+          <span class="badge badge-muted">Low barrier barrier</span>
+          <time class="card-date" datetime="2026-09-08">Updated 8 Sep 2026</time>
+        </div>
+        <h3><a href="games/lost-ruins.html">Lost Ruins</a></h3>
+        <p class="excerpt">Lost Ruins is a 2D side-scrolling action-survival game that tasks a schoolgirl, stripped of her memories, with exploring a hostile subterranean realm. While structurally resembling a Metroidvania, it downplays mobility-based progression like double jumps and dashes…</p>
+        <a class="card-more" href="games/lost-ruins.html">Continue reading<span class="sr-only">: Lost Ruins</span></a>
+      </div>
     </article>
     <article class="card" data-genres="adventure">
-      <a href="games/nightshade.html">
+      <a class="card-media" href="games/nightshade.html">
         <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/512180/header.jpg?t=1782115860" alt="Nightshade/百花百狼 key art" width="616" height="353" loading="lazy">
-        <div class="card-body">
-          <div class="card-meta">
-            <span class="badge">Adventure</span>
-            <span>Red Entertainment, LANTERN ROOMS</span>
-          </div>
-          <h2>Nightshade/百花百狼</h2>
-          <p>Melancholic Sengoku Espionage Romance</p>
-        </div>
       </a>
+      <div class="card-body">
+        <div class="badge-row">
+          <span class="badge">Adventure</span>
+          <span class="badge badge-muted">Approximately 25 to 30 hours to unlock all endin</span>
+          <span class="badge badge-muted">No Japanese needed barrier</span>
+          <time class="card-date" datetime="2026-09-09">Updated 9 Sep 2026</time>
+        </div>
+        <h3><a href="games/nightshade.html">Nightshade/百花百狼</a></h3>
+        <p class="excerpt">Nightshade (百花百狼) is a historical-fantasy otome visual novel set in the Sengoku Period, following the unification of Japan. Players take on the role of Enju, a young shinobi-in-training from the Koga clan. When framed for the…</p>
+        <a class="card-more" href="games/nightshade.html">Continue reading<span class="sr-only">: Nightshade/百花百狼</span></a>
+      </div>
     </article>
     <article class="card" data-genres="adventure simulation">
-      <a href="games/the-song-of-saya.html">
+      <a class="card-media" href="games/the-song-of-saya.html">
         <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/702050/header.jpg?t=1778231826" alt="The Song of Saya key art" width="616" height="353" loading="lazy">
-        <div class="card-body">
-          <div class="card-meta">
-            <span class="badge">Adventure</span>
-            <span>Nitroplus</span>
-          </div>
-          <h2>The Song of Saya</h2>
-          <p>Chamber-Scale Lovecraftian Body Horror</p>
-        </div>
       </a>
+      <div class="card-body">
+        <div class="badge-row">
+          <span class="badge">Adventure</span>
+          <span class="badge badge-muted">Approximately 3 to 5 hours to complete all three</span>
+          <span class="badge badge-muted">Medium barrier barrier</span>
+          <time class="card-date" datetime="2026-09-10">Updated 10 Sep 2026</time>
+        </div>
+        <h3><a href="games/the-song-of-saya.html">The Song of Saya</a></h3>
+        <p class="excerpt">The Song of Saya (Saya no Uta) is a seminal 2003 psychological horror visual novel written by Gen Urobuchi and developed by Nitroplus, presented here in its remastered Steam release. The story follows Fuminori Sakisaka, a…</p>
+        <a class="card-more" href="games/the-song-of-saya.html">Continue reading<span class="sr-only">: The Song of Saya</span></a>
+      </div>
     </article>
     <article class="card" data-genres="adventure horror jrpg">
-      <a href="games/wadanohara.html">
+      <a class="card-media" href="games/wadanohara.html">
         <img src="img/placeholder-header.svg" alt="Wadanohara and the Great Blue Sea key art" width="616" height="353" loading="lazy">
-        <div class="card-body">
-          <div class="card-meta">
-            <span class="badge">Adventure</span>
-            <span>Deep-Sea Prisoner</span>
-          </div>
-          <h2>Wadanohara and the Great Blue Sea</h2>
-          <p>Cute sea-witch RPG that curdles into Japanese dark fairy tale</p>
-        </div>
       </a>
+      <div class="card-body">
+        <div class="badge-row">
+          <span class="badge">Adventure</span>
+          <span class="badge badge-muted">10-18 hours</span>
+          <span class="badge badge-muted">High barrier barrier</span>
+          <time class="card-date" datetime="2026-09-08">Updated 8 Sep 2026</time>
+        </div>
+        <h3><a href="games/wadanohara.html">Wadanohara and the Great Blue Sea</a></h3>
+        <p class="excerpt">Wadanohara and the Great Blue Sea is a Japanese dark fairy-tale RPG about a sea witch, her familiars, and an ocean that is not a healing bath. It looks pastel. It is not Recettear cozy and…</p>
+        <a class="card-more" href="games/wadanohara.html">Continue reading<span class="sr-only">: Wadanohara and the Great Blue Sea</span></a>
+      </div>
     </article>
     <article class="card" data-genres="horror adventure">
-      <a href="games/corpse-party.html">
+      <a class="card-media" href="games/corpse-party.html">
         <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/251270/header.jpg?t=1740426499" alt="Corpse Party key art" width="616" height="353" loading="lazy">
-        <div class="card-body">
-          <div class="card-meta">
-            <span class="badge">Horror</span>
-            <span>Team GrisGris</span>
-          </div>
-          <h2>Corpse Party</h2>
-          <p>School-curse survival with brutal chapter flags</p>
-        </div>
       </a>
+      <div class="card-body">
+        <div class="badge-row">
+          <span class="badge">Horror</span>
+          <span class="badge badge-muted">10-18 hours</span>
+          <span class="badge badge-muted">High barrier barrier</span>
+          <time class="card-date" datetime="2026-09-08">Updated 8 Sep 2026</time>
+        </div>
+        <h3><a href="games/corpse-party.html">Corpse Party</a></h3>
+        <p class="excerpt">Corpse Party is Team GrisGris&#39;s long-lived school-horror series entry that Steam players usually mean when they say the name: a group of students perform a charm, arrive in a wrong Heavenly Host, and try to leave…</p>
+        <a class="card-more" href="games/corpse-party.html">Continue reading<span class="sr-only">: Corpse Party</span></a>
+      </div>
     </article>
     <article class="card" data-genres="horror adventure">
-      <a href="games/ib.html">
+      <a class="card-media" href="games/ib.html">
         <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1901370/header.jpg?t=1779842056" alt="Ib key art" width="616" height="353" loading="lazy">
-        <div class="card-body">
-          <div class="card-meta">
-            <span class="badge">Horror</span>
-            <span>kouri</span>
-          </div>
-          <h2>Ib</h2>
-          <p>Gallery-walking psychological horror classic</p>
-        </div>
       </a>
+      <div class="card-body">
+        <div class="badge-row">
+          <span class="badge">Horror</span>
+          <span class="badge badge-muted">3-6 hours</span>
+          <span class="badge badge-muted">Medium barrier barrier</span>
+          <time class="card-date" datetime="2026-09-08">Updated 8 Sep 2026</time>
+        </div>
+        <h3><a href="games/ib.html">Ib</a></h3>
+        <p class="excerpt">Ib is kouri&#39;s museum-horror adventure, originally a freeware RPG Maker landmark, now a Steam remake with the same nightmare: a girl named Ib is trapped in a gallery where paintings want to be people and people…</p>
+        <a class="card-more" href="games/ib.html">Continue reading<span class="sr-only">: Ib</span></a>
+      </div>
     </article>
     <article class="card" data-genres="horror adventure">
-      <a href="games/mad-father.html">
+      <a class="card-media" href="games/mad-father.html">
         <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/483980/header.jpg?t=1779842400" alt="Mad Father key art" width="616" height="353" loading="lazy">
-        <div class="card-body">
-          <div class="card-meta">
-            <span class="badge">Horror</span>
-            <span>Sen</span>
-          </div>
-          <h2>Mad Father</h2>
-          <p>Orphanage-lab family horror, RPG Maker canon</p>
-        </div>
       </a>
+      <div class="card-body">
+        <div class="badge-row">
+          <span class="badge">Horror</span>
+          <span class="badge badge-muted">5-9 hours</span>
+          <span class="badge badge-muted">Medium barrier barrier</span>
+          <time class="card-date" datetime="2026-09-08">Updated 8 Sep 2026</time>
+        </div>
+        <h3><a href="games/mad-father.html">Mad Father</a></h3>
+        <p class="excerpt">Mad Father is Sen&#39;s horror adventure starring Aya, a girl in a mansion that is also a laboratory, with a father whose love and whose crimes occupy the same operating table. You sneak, solve, read, and…</p>
+        <a class="card-more" href="games/mad-father.html">Continue reading<span class="sr-only">: Mad Father</span></a>
+      </div>
     </article>
     <article class="card" data-genres="horror adventure">
-      <a href="games/misao.html">
+      <a class="card-media" href="games/misao.html">
         <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/691450/header.jpg?t=1735191987" alt="Misao key art" width="616" height="353" loading="lazy">
-        <div class="card-body">
-          <div class="card-meta">
-            <span class="badge">Horror</span>
-            <span>Sen</span>
-          </div>
-          <h2>Misao</h2>
-          <p>School-ghost mystery with a nasty rumor engine</p>
-        </div>
       </a>
+      <div class="card-body">
+        <div class="badge-row">
+          <span class="badge">Horror</span>
+          <span class="badge badge-muted">4-8 hours</span>
+          <span class="badge badge-muted">Medium barrier barrier</span>
+          <time class="card-date" datetime="2026-09-08">Updated 8 Sep 2026</time>
+        </div>
+        <h3><a href="games/misao.html">Misao</a></h3>
+        <p class="excerpt">Misao is Sen&#39;s school-horror adventure about a missing girl, a curse, and classmates who are not extras. You explore a school that is both mundane and already guilty, collect information that behaves like inventory, and discover…</p>
+        <a class="card-more" href="games/misao.html">Continue reading<span class="sr-only">: Misao</span></a>
+      </div>
     </article>
     <article class="card" data-genres="horror adventure">
-      <a href="games/the-crooked-man.html">
+      <a class="card-media" href="games/the-crooked-man.html">
         <img src="https://cdn.akamai.steamstatic.com/steam/apps/511640/header.jpg" alt="The Crooked Man key art" width="616" height="353" loading="lazy">
-        <div class="card-body">
-          <div class="card-meta">
-            <span class="badge">Horror</span>
-            <span>Uri</span>
-          </div>
-          <h2>The Crooked Man</h2>
-          <p>Apartment psychological horror, Japanese urban ghost grammar</p>
-        </div>
       </a>
+      <div class="card-body">
+        <div class="badge-row">
+          <span class="badge">Horror</span>
+          <span class="badge badge-muted">4-7 hours</span>
+          <span class="badge badge-muted">High barrier barrier</span>
+          <time class="card-date" datetime="2026-09-08">Updated 8 Sep 2026</time>
+        </div>
+        <h3><a href="games/the-crooked-man.html">The Crooked Man</a></h3>
+        <p class="excerpt">The Crooked Man is Uri&#39;s apartment-scale psychological horror, a Japanese RPG Maker-descended story about a man, a building, and a figure that is wrong in a way jump-scare compilations cannot summarize. You search rooms, read what…</p>
+        <a class="card-more" href="games/the-crooked-man.html">Continue reading<span class="sr-only">: The Crooked Man</span></a>
+      </div>
     </article>
     <article class="card" data-genres="horror adventure">
-      <a href="games/witchs-house-mv.html">
+      <a class="card-media" href="games/witchs-house-mv.html">
         <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/885810/header.jpg?t=1772601594" alt="The Witch&#39;s House MV key art" width="616" height="353" loading="lazy">
-        <div class="card-body">
-          <div class="card-meta">
-            <span class="badge">Horror</span>
-            <span>Fummy</span>
-          </div>
-          <h2>The Witch&#39;s House MV</h2>
-          <p>Fairytale house of malicious puzzle rules</p>
-        </div>
       </a>
+      <div class="card-body">
+        <div class="badge-row">
+          <span class="badge">Horror</span>
+          <span class="badge badge-muted">4-8 hours</span>
+          <span class="badge badge-muted">Medium barrier barrier</span>
+          <time class="card-date" datetime="2026-09-08">Updated 8 Sep 2026</time>
+        </div>
+        <h3><a href="games/witchs-house-mv.html">The Witch&#39;s House MV</a></h3>
+        <p class="excerpt">The Witch&#39;s House MV is Fummy&#39;s rebuilt RPG Maker horror about Viola, a girl who enters a witch&#39;s home and discovers that the building is a set of jokes written in blood. Puzzles look like a…</p>
+        <a class="card-more" href="games/witchs-house-mv.html">Continue reading<span class="sr-only">: The Witch&#39;s House MV</span></a>
+      </div>
     </article>
     <article class="card" data-genres="horror adventure">
-      <a href="games/yume-nikki.html">
+      <a class="card-media" href="games/yume-nikki.html">
         <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/650700/header.jpg?t=1779843132" alt="Yume Nikki key art" width="616" height="353" loading="lazy">
-        <div class="card-body">
-          <div class="card-meta">
-            <span class="badge">Horror</span>
-            <span>Kikiyama</span>
-          </div>
-          <h2>Yume Nikki</h2>
-          <p>Silent bedroom dream-walk, the internet&#39;s Japanese psychogeography</p>
-        </div>
       </a>
+      <div class="card-body">
+        <div class="badge-row">
+          <span class="badge">Horror</span>
+          <span class="badge badge-muted">8-20 hours (no compass)</span>
+          <span class="badge badge-muted">No Japanese needed barrier</span>
+          <time class="card-date" datetime="2026-09-08">Updated 8 Sep 2026</time>
+        </div>
+        <h3><a href="games/yume-nikki.html">Yume Nikki</a></h3>
+        <p class="excerpt">Yume Nikki is Kikiyama&#39;s dream explorer: a shut-in named Madotsuki naps, wanders collective-unconscious neighborhoods, collects effects that change her body, and never explains herself. It is the fountainhead of a whole Japanese and global walking-sim horror…</p>
+        <a class="card-more" href="games/yume-nikki.html">Continue reading<span class="sr-only">: Yume Nikki</span></a>
+      </div>
     </article>
     <article class="card" data-genres="jrpg adventure">
-      <a href="games/lieat.html">
+      <a class="card-media" href="games/lieat.html">
         <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/373770/header.jpg?t=1779843208" alt="LiEat key art" width="616" height="353" loading="lazy">
-        <div class="card-body">
-          <div class="card-meta">
-            <span class="badge">JRPG</span>
-            <span>2nd Creed</span>
-          </div>
-          <h2>LiEat</h2>
-          <p>Cozy turn-based JRPG about a dragon who eats lies</p>
-        </div>
       </a>
+      <div class="card-body">
+        <div class="badge-row">
+          <span class="badge">JRPG</span>
+          <span class="badge badge-muted">8-14 hours</span>
+          <span class="badge badge-muted">Medium barrier barrier</span>
+          <time class="card-date" datetime="2026-09-08">Updated 8 Sep 2026</time>
+        </div>
+        <h3><a href="games/lieat.html">LiEat</a></h3>
+        <p class="excerpt">LiEat is a Japanese RPG Maker-era JRPG about Leo, a dragon in human-ish trouble, who eats lies and stumbles through chapter-sized mysteries with a small cast. It is gentle compared with the horror cluster on this…</p>
+        <a class="card-more" href="games/lieat.html">Continue reading<span class="sr-only">: LiEat</span></a>
+      </div>
     </article>
     <article class="card" data-genres="jrpg adventure">
-      <a href="games/recettear.html">
+      <a class="card-media" href="games/recettear.html">
         <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/70400/header.jpg?t=1447353479" alt="Recettear: An Item Shop&#39;s Tale key art" width="616" height="353" loading="lazy">
-        <div class="card-body">
-          <div class="card-meta">
-            <span class="badge">JRPG</span>
-            <span>EasyGameStation</span>
-          </div>
-          <h2>Recettear: An Item Shop&#39;s Tale</h2>
-          <p>Cozy debt-driven item shop JRPG</p>
-        </div>
       </a>
+      <div class="card-body">
+        <div class="badge-row">
+          <span class="badge">JRPG</span>
+          <span class="badge badge-muted">15-25 hours</span>
+          <span class="badge badge-muted">Medium barrier barrier</span>
+          <time class="card-date" datetime="2026-09-08">Updated 8 Sep 2026</time>
+        </div>
+        <h3><a href="games/recettear.html">Recettear: An Item Shop&#39;s Tale</a></h3>
+        <p class="excerpt">Recettear is EasyGameStation&#39;s shop-sim JRPG about Recette, a girl who must pay back her missing father&#39;s debt under the supervision of Tear, a fairy loan shark with a spreadsheet for a heart. By day you set…</p>
+        <a class="card-more" href="games/recettear.html">Continue reading<span class="sr-only">: Recettear: An Item Shop&#39;s Tale</span></a>
+      </div>
     </article>
     <article class="card" data-genres="jrpg roguelite">
-      <a href="games/touhou-genso-wanderer-reloaded.html">
+      <a class="card-media" href="games/touhou-genso-wanderer-reloaded.html">
         <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/931500/header.jpg?t=1710781564" alt="Touhou Genso Wanderer Reloaded key art" width="616" height="353" loading="lazy">
-        <div class="card-body">
-          <div class="card-meta">
-            <span class="badge">JRPG</span>
-            <span>Aqua Style</span>
-          </div>
-          <h2>Touhou Genso Wanderer Reloaded</h2>
-          <p>Roguelike Gensokyo dungeon crawler with party-chat seasoning</p>
-        </div>
       </a>
+      <div class="card-body">
+        <div class="badge-row">
+          <span class="badge">JRPG</span>
+          <span class="badge badge-muted">20-40 hours</span>
+          <span class="badge badge-muted">Medium barrier barrier</span>
+          <time class="card-date" datetime="2026-09-08">Updated 8 Sep 2026</time>
+        </div>
+        <h3><a href="games/touhou-genso-wanderer-reloaded.html">Touhou Genso Wanderer Reloaded</a></h3>
+        <p class="excerpt">Touhou Genso Wanderer Reloaded is Aqua Style&#39;s official-ish (licensed) Touhou roguelike RPG: you walk Gensokyo-flavored dungeons on tiles, manage a party of familiar faces, and treat floors like a Japanese mystery-dungeon cousin rather than like Luna…</p>
+        <a class="card-more" href="games/touhou-genso-wanderer-reloaded.html">Continue reading<span class="sr-only">: Touhou Genso Wanderer Reloaded</span></a>
+      </div>
     </article>
     <article class="card" data-genres="casual indie rpg simulation">
-      <a href="games/touhou-mystia-s-izakaya.html">
+      <a class="card-media" href="games/touhou-mystia-s-izakaya.html">
         <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1584090/header.jpg?t=1788596587" alt="Touhou Mystia&#39;s Izakaya key art" width="616" height="353" loading="lazy">
-        <div class="card-body">
-          <div class="card-meta">
-            <span class="badge">JRPG</span>
-            <span>二色幽紫蝶, Re零同人社</span>
-          </div>
-          <h2>Touhou Mystia&#39;s Izakaya</h2>
-          <p>Charming Pixel-Art Gastronomic Cozy Strategy</p>
-        </div>
       </a>
+      <div class="card-body">
+        <div class="badge-row">
+          <span class="badge">JRPG</span>
+          <span class="badge badge-muted">The base game takes roughly 25 to 30 hours to co</span>
+          <span class="badge badge-muted">Low barrier barrier</span>
+          <time class="card-date" datetime="2026-09-08">Updated 8 Sep 2026</time>
+        </div>
+        <h3><a href="games/touhou-mystia-s-izakaya.html">Touhou Mystia&#39;s Izakaya</a></h3>
+        <p class="excerpt">Touhou Mystia&#39;s Izakaya is an action-driven restaurant management simulator starring Mystia Lorelei, a night sparrow yokai who runs a bustling izakaya in Gensokyo. The daily gameplay loop is cleanly split into two distinct phases: daytime preparation…</p>
+        <a class="card-more" href="games/touhou-mystia-s-izakaya.html">Continue reading<span class="sr-only">: Touhou Mystia&#39;s Izakaya</span></a>
+      </div>
     </article>
     <article class="card" data-genres="action adventure indie rpg">
-      <a href="games/touhou-new-world.html">
+      <a class="card-media" href="games/touhou-new-world.html">
         <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2150660/header.jpg?t=1750958891" alt="Touhou: New World key art" width="616" height="353" loading="lazy">
-        <div class="card-body">
-          <div class="card-meta">
-            <span class="badge">JRPG</span>
-            <span>Ankake Spa</span>
-          </div>
-          <h2>Touhou: New World</h2>
-          <p>Isometric Touhou Bullet-Hell Action-RPG</p>
-        </div>
       </a>
+      <div class="card-body">
+        <div class="badge-row">
+          <span class="badge">JRPG</span>
+          <span class="badge badge-muted">Completing a single character&#39;s campaign takes r</span>
+          <span class="badge badge-muted">No Japanese needed barrier</span>
+          <time class="card-date" datetime="2026-09-09">Updated 9 Sep 2026</time>
+        </div>
+        <h3><a href="games/touhou-new-world.html">Touhou: New World</a></h3>
+        <p class="excerpt">Developed by the veteran doujin circle Ankake Spa, Touhou: New World is an isometric, top-down action-RPG that serves as the spiritual successor to Touhou Koukishin (Adventures of Scarlet Curiosity). Playing as either the shrine maiden Reimu…</p>
+        <a class="card-more" href="games/touhou-new-world.html">Continue reading<span class="sr-only">: Touhou: New World</span></a>
+      </div>
     </article>
     <article class="card" data-genres="action rpg">
-      <a href="games/touhou-scarlet-curiosity.html">
+      <a class="card-media" href="games/touhou-scarlet-curiosity.html">
         <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/845880/header.jpg?t=1751395467" alt="Touhou: Scarlet Curiosity key art" width="616" height="353" loading="lazy">
-        <div class="card-body">
-          <div class="card-meta">
-            <span class="badge">JRPG</span>
-            <span>Ankake Spa</span>
-          </div>
-          <h2>Touhou: Scarlet Curiosity</h2>
-          <p>Mid-2000s Falcom-Style Action RPG</p>
-        </div>
       </a>
+      <div class="card-body">
+        <div class="badge-row">
+          <span class="badge">JRPG</span>
+          <span class="badge badge-muted">A single campaign run takes about 4 to 6 hours,</span>
+          <span class="badge badge-muted">No Japanese needed barrier</span>
+          <time class="card-date" datetime="2026-09-09">Updated 9 Sep 2026</time>
+        </div>
+        <h3><a href="games/touhou-scarlet-curiosity.html">Touhou: Scarlet Curiosity</a></h3>
+        <p class="excerpt">Touhou: Scarlet Curiosity is a vibrant, isometric, stage-based action RPG starring the vampire Remilia Scarlet and her elegant maid Sakuya Izayoi. Drawing heavy structural and mechanical inspiration from classic 3D Falcom titles like Ys VI, The…</p>
+        <a class="card-more" href="games/touhou-scarlet-curiosity.html">Continue reading<span class="sr-only">: Touhou: Scarlet Curiosity</span></a>
+      </div>
     </article>
     <article class="card" data-genres="action roguelite">
-      <a href="games/downwell.html">
+      <a class="card-media" href="games/downwell.html">
         <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/360740/header.jpg?t=1769028721" alt="Downwell key art" width="616" height="353" loading="lazy">
-        <div class="card-body">
-          <div class="card-meta">
-            <span class="badge">Roguelite</span>
-            <span>Moppin</span>
-          </div>
-          <h2>Downwell</h2>
-          <p>Gunboots, gravity, and one-more-run arcade purity</p>
-        </div>
       </a>
+      <div class="card-body">
+        <div class="badge-row">
+          <span class="badge">Roguelite</span>
+          <span class="badge badge-muted">3-8 hours to mastery</span>
+          <span class="badge badge-muted">No Japanese needed barrier</span>
+          <time class="card-date" datetime="2026-09-08">Updated 8 Sep 2026</time>
+        </div>
+        <h3><a href="games/downwell.html">Downwell</a></h3>
+        <p class="excerpt">Downwell is Moppin&#39;s vertical roguelite about a kid in a well with gunboots. You fall through procedurally assembled slices of cave, shooting downward to kill, to hover, and to avoid landing on spikes. Stomping enemies refills…</p>
+        <a class="card-more" href="games/downwell.html">Continue reading<span class="sr-only">: Downwell</span></a>
+      </div>
     </article>
     <article class="card" data-genres="jrpg roguelite">
-      <a href="games/one-way-heroics.html">
+      <a class="card-media" href="games/one-way-heroics.html">
         <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/266210/header.jpg?t=1728470787" alt="One Way Heroics key art" width="616" height="353" loading="lazy">
-        <div class="card-body">
-          <div class="card-meta">
-            <span class="badge">Roguelite</span>
-            <span>SmokingWOLF</span>
-          </div>
-          <h2>One Way Heroics</h2>
-          <p>The world scrolls right, the Demon Lord waits, Japanese roguelike joke-science</p>
-        </div>
       </a>
+      <div class="card-body">
+        <div class="badge-row">
+          <span class="badge">Roguelite</span>
+          <span class="badge badge-muted">8-20 hours of runs</span>
+          <span class="badge badge-muted">Medium barrier barrier</span>
+          <time class="card-date" datetime="2026-09-08">Updated 8 Sep 2026</time>
+        </div>
+        <h3><a href="games/one-way-heroics.html">One Way Heroics</a></h3>
+        <p class="excerpt">One Way Heroics is SmokingWOLF&#39;s force-scrolling roguelike RPG: the world inches right, the Demon Lord is a deadline, and every build is a joke that might still save the dimension. It is a Japanese indie classic…</p>
+        <a class="card-more" href="games/one-way-heroics.html">Continue reading<span class="sr-only">: One Way Heroics</span></a>
+      </div>
     </article>
   </div>
   <p class="empty">No dossiers in this genre yet. Check back after the next scan.</p>
@@ -524,8 +672,9 @@
         </div>
         <div class="footer-links">
           <strong>Site</strong>
-          <a href="about.html">About Us</a>
+          <a href="about.html">About</a>
           <a href="contact.html">Contact</a>
+          <a href="sitemap.html">Sitemap</a>
           <a href="index.html">Latest Dossiers</a>
         </div>
         <div class="footer-links">

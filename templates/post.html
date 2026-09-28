@@ -3,7 +3,11 @@
 <article class="article wrap">
   <header class="article-hero">
     <p class="kicker">{{ game.primary_genre }} dossier</p>
+    {% if game.headline %}
+    <h1>{{ game.title }} Deep Dive: {{ game.headline }}</h1>
+    {% else %}
     <h1>{{ game.title }}</h1>
+    {% endif %}
     <p class="byline">{{ game.developer }} · First released {{ game.release_year }} · Language barrier: {{ game.language_barrier.level }} · Updated {{ game.updated }}</p>
     <div class="article-cover">
       <img src="{{ game.header_image | media_url(root_prefix) }}" alt="{{ game.title }} header art">
@@ -29,17 +33,29 @@
     </script>
   </aside>
   <div class="prose">
-    <h2>What it is</h2>
+    <h2>The Hook &amp; Core Philosophy</h2>
     <p>{{ game.what_is_it }}</p>
-    <h2>Deep-dive systems analysis</h2>
+    <h2>Mechanical Architecture &amp; Game Loop</h2>
     <p>{{ game.deep_dive_analysis }}</p>
-    <h2>Why it is trending in Japan</h2>
+    {% if game.visuals_audio_identity %}
+    <h2>Visuals, Audio &amp; Atmospheric Identity</h2>
+    <p>{{ game.visuals_audio_identity }}</p>
+    {% endif %}
+    <h2>Community Reception &amp; Japanese Player Consensus</h2>
+    {% if game.community_quote %}
+    <blockquote class="community-quote">{{ game.community_quote }}</blockquote>
+    {% endif %}
     <ul>
       {% for item in game.why_trending_in_japan %}
       <li><strong>{{ item.title }}.</strong> {{ item.details }}</li>
       {% endfor %}
     </ul>
-    <h2>Language barrier</h2>
+    <h2>Radar Verdict &amp; Steam Accessibility</h2>
+    {% if game.radar_score %}
+    <p class="radar-score">{{ game.radar_score }}</p>
+    {% endif %}
+    <p>{{ game.target_audience }}</p>
+    <h3>Language barrier</h3>
     <p><strong>{{ game.language_barrier.level }}</strong></p>
     <div class="lang-meter" aria-hidden="true">
       {% for i in range(4) %}
@@ -47,10 +63,8 @@
       {% endfor %}
     </div>
     <p>{{ game.language_barrier.details }}</p>
-    <h2>Playtime and difficulty</h2>
+    <h3>Playtime and difficulty</h3>
     <p>{{ game.playtime_and_difficulty }}</p>
-    <h2>Who this is for</h2>
-    <p>{{ game.target_audience }}</p>
     <aside class="ad-slot" aria-label="Advertisement">
       <p class="ad-label">Advertisement</p>
       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2075840815269276"

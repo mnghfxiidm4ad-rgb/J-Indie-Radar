@@ -1,12 +1,18 @@
 {% extends "base.html" %}
 {% block content %}
-<section class="hero">
+<section class="hero" aria-labelledby="hero-title">
   <div class="wrap">
     <p class="kicker">Japan-made indie intelligence</p>
-    <h1>Discover Hidden Japanese Indie Gems &amp; Untranslated Classics</h1>
-    <p class="lede">Structured English dossiers on Japanese Steam indies: why they exploded in Japan, how bad the language barrier really is, and what the systems are doing beneath the pixel art. Built for overseas players who want more than a store-page paragraph.</p>
+    <h1 id="hero-title">Discover Hidden Japanese Indie Gems &amp; Untranslated Classics</h1>
+    <p class="lede">We curate Japanese Steam indies the way players in Japan actually argue about them: systems first, the real language barrier second, and store blurbs last.</p>
+    <p class="hero-copy">This is an editorial radar, not a capsule wall. Each dossier is an original English read for someone outside Japan who is tired of a header image and a one-line store description. We spell out why a title blew up in Japanese reviews, how bad the language barrier really is, and what the systems are doing under the pixel art — a gun that loses levels when you get hit, a rumor engine that rewrites a school ghost story, or a shop ledger that is the whole JRPG. If a game is only cute, we say so. If you will be stuck without Japanese, we grade that before you buy.</p>
+    <ul class="hero-points">
+      <li><strong>Language-barrier grades.</strong> None, Low, Medium, or High, with what you can actually finish without reading Japanese.</li>
+      <li><strong>Systems, not vibes.</strong> The loop after the trailer: resources, fail states, and the trick the store page skips.</li>
+      <li><strong>Why Japan cared.</strong> The local recommendation logic, written for players who were not in that conversation.</li>
+    </ul>
     <div class="hero-actions">
-      <a class="btn btn-primary" href="#catalog">Browse the radar</a>
+      <a class="btn btn-primary" href="#picks">Read the picks</a>
       <a class="btn btn-ghost" href="about.html">Editorial policy</a>
     </div>
   </div>
@@ -26,7 +32,39 @@
     </script>
   </aside>
 </div>
-<section class="wrap" id="catalog">
+<section class="wrap picks" id="picks" aria-labelledby="picks-title">
+  <header class="section-head">
+    <p class="kicker">Editor's radar</p>
+    <h2 id="picks-title">Picks worth opening first</h2>
+    <p class="section-copy">Two dossiers we would hand someone who has ten minutes and wants a reason to click. The lead is the opening of the piece, not a store-page paraphrase.</p>
+  </header>
+  <div class="featured-grid">
+    {% for game in featured %}
+    <article class="feature-card">
+      <a class="feature-media" href="games/{{ game.slug }}.html">
+        <img src="{{ game.header_image | media_url(root_prefix) }}" alt="{{ game.title }} key art" width="616" height="353" {% if loop.first %}loading="eager" fetchpriority="high"{% else %}loading="lazy"{% endif %}>
+      </a>
+      <div class="feature-body">
+        <div class="badge-row">
+          <span class="badge">{{ game.primary_genre }}</span>
+          <span class="badge badge-muted">{{ game.playtime_label }}</span>
+          <span class="badge badge-muted">{{ game.barrier_label }} barrier</span>
+        </div>
+        <h3><a href="games/{{ game.slug }}.html">{{ game.title }}</a></h3>
+        <p class="byline"><time datetime="{{ game.updated }}">Updated {{ game.updated_label }}</time> · {{ game.developer }}</p>
+        <p class="excerpt">{{ game.lead }}</p>
+        <a class="btn btn-primary" href="games/{{ game.slug }}.html">Read article</a>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+<section class="wrap" id="catalog" aria-labelledby="catalog-title">
+  <header class="section-head">
+    <p class="kicker">The catalog</p>
+    <h2 id="catalog-title">Dossiers, with the argument on the card</h2>
+    <p class="section-copy">Filter by genre. Every card shows the playtime estimate, the language-barrier grade, the last revision date, and a short original excerpt so you can tell the pieces apart before you open one.</p>
+  </header>
   <div class="toolbar" role="tablist" aria-label="Genre filters">
     <button class="filter-btn is-active" data-filter="all" type="button">All</button>
     <button class="filter-btn" data-filter="jrpg" type="button">JRPG</button>
@@ -38,17 +76,20 @@
   <div class="grid">
     {% for game in games %}
     <article class="card" data-genres="{{ game.genres | join(' ') | lower }}">
-      <a href="games/{{ game.slug }}.html">
+      <a class="card-media" href="games/{{ game.slug }}.html">
         <img src="{{ game.header_image | media_url(root_prefix) }}" alt="{{ game.title }} key art" width="616" height="353" loading="lazy">
-        <div class="card-body">
-          <div class="card-meta">
-            <span class="badge">{{ game.primary_genre }}</span>
-            <span>{{ game.developer }}</span>
-          </div>
-          <h2>{{ game.title }}</h2>
-          <p>{{ game.vibe }}</p>
-        </div>
       </a>
+      <div class="card-body">
+        <div class="badge-row">
+          <span class="badge">{{ game.primary_genre }}</span>
+          <span class="badge badge-muted">{{ game.playtime_label }}</span>
+          <span class="badge badge-muted">{{ game.barrier_label }} barrier</span>
+          <time class="card-date" datetime="{{ game.updated }}">Updated {{ game.updated_label }}</time>
+        </div>
+        <h3><a href="games/{{ game.slug }}.html">{{ game.title }}</a></h3>
+        <p class="excerpt">{{ game.excerpt }}</p>
+        <a class="card-more" href="games/{{ game.slug }}.html">Continue reading<span class="sr-only">: {{ game.title }}</span></a>
+      </div>
     </article>
     {% endfor %}
   </div>

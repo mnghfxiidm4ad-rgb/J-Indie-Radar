@@ -112,6 +112,117 @@ def absolute_media(cfg: dict, url: str) -> str:
     return f"{cfg['site_url']}/{url.lstrip('/')}"
 
 
+# Used when a dossier has no explicit featured flag and dates are tied.
+DEFAULT_FEATURED_SLUGS = ("cave-story-plus", "yume-nikki")
+
+
+def _clean_text(value) -> str:
+    if not isinstance(value, str):
+        return ""
+    return " ".join(value.split()).strip()
+
+
+def _truncate_words(text: str, max_words: int) -> str:
+    words = text.split()
+    if len(words) <= max_words:
+        return text
+    return " ".join(words[:max_words]).rstrip(".,;:—-") + "…"
+
+
+def _truncate_chars(text: str, max_chars: int) -> str:
+    if len(text) <= max_chars:
+        return text
+    cut = text[: max_chars + 1].rsplit(" ", 1)[0].rstrip(".,;:—-")
+    if not cut:
+        cut = text[:max_chars].rstrip()
+    return cut + "…"
+
+
+def listing_excerpt(game: dict, *, words: int = 36, chars: int | None = None) -> str:
+    """Prefer excerpt/summary/description, then what_is_it, then vibe."""
+    source = ""
+    for key in ("excerpt", "summary", "description"):
+        source = _clean_text(game.get(key))
+        if source:
+            break
+    if not source:
+        source = _clean_text(game.get("what_is_it")) or _clean_text(game.get("vibe"))
+    if not source:
+        title = _clean_text(game.get("title")) or "This game"
+        source = (
+            f"{title} has an original J-Indie Radar dossier on its systems, "
+            "its language barrier, and why Japanese players kept recommending it."
+        )
+    if chars:
+        return _truncate_chars(source, chars)
+    return _truncate_words(source, words)
+
+
+def format_updated(value: str) -> str:
+    raw = (value or "").strip()
+    try:
+        dt = datetime.strptime(raw[:10], "%Y-%m-%d")
+    except ValueError:
+        return raw
+    return f"{dt.day} {dt.strftime('%b %Y')}"
+
+
+def barrier_short(game: dict) -> str:
+    raw = game.get("language_barrier")
+    level = ""
+    if isinstance(raw, dict):
+        level = str(raw.get("level") or "")
+    elif isinstance(raw, str):
+        level = raw
+    short = level.split("(", 1)[0].strip()
+    return short or "Unrated"
+
+
+def barrier_badge(game: dict) -> str:
+    short = barrier_short(game)
+    low = short.lower()
+    if low.startswith("none"):
+        return "No Japanese needed"
+    if low.startswith("unrated"):
+        return "Barrier unrated"
+    return f"{short} barrier"
+
+
+def prepare_listing(game: dict) -> dict:
+    item = dict(game)
+    item["excerpt"] = listing_excerpt(game, words=36)
+    item["lead"] = listing_excerpt(game, chars=155)
+    item["updated_label"] = format_updated(str(game.get("updated") or ""))
+    item["barrier_label"] = barrier_badge(game)
+    item["playtime_label"] = _clean_text(game.get("playtime_short")) or "Varies"
+    return item
+
+
+def pick_featured(games: list[dict], limit: int = 2) -> list[dict]:
+    by_slug = {str(g.get("slug") or ""): g for g in games}
+    picked: list[dict] = []
+    seen: set[str] = set()
+
+    def take(game: dict | None) -> None:
+        if not game or len(picked) >= limit:
+            return
+        slug = str(game.get("slug") or "")
+        if not slug or slug in seen:
+            return
+        seen.add(slug)
+        picked.append(game)
+
+    for game in games:
+        if game.get("featured") is True:
+            take(game)
+    for slug in DEFAULT_FEATURED_SLUGS:
+        take(by_slug.get(slug))
+    newest = sorted(games, key=lambda g: str(g.get("updated") or ""), reverse=True)
+    for game in newest:
+        take(game)
+    return picked
+
+
 def _coerce_why(items) -> list[dict]:
     fixed: list[dict] = []
     if not isinstance(items, list):
@@ -270,6 +381,7 @@ def write_robots_and_sitemap(cfg: dict, games: list[dict]) -> None:
         f"{cfg['site_url']}/privacy.html",
         f"{cfg['site_url']}/contact.html",
         f"{cfg['site_url']}/disclaimer.html",
+        f"{cfg['site_url']}/sitemap.html",
     ]
     urls += [f"{cfg['site_url']}/games/{g['slug']}.html" for g in games]
     today = date.today().isoformat()
@@ -281,6 +393,31 @@ def write_robots_and_sitemap(cfg: dict, games: list[dict]) -> None:
         parts.append("  </url>")
     parts.append("</urlset>")
     (DOCS / "sitemap.xml").write_text("\n".join(parts) + "\n", encoding="utf-8")
+
+
+def sitemap_page_body(games: list[dict]) -> str:
+    from html import escape
+
+    lines = [
+        "<p>Every public page on J-Indie Radar is listed here: the editorial pages, and each Japanese indie dossier. The same URLs are also published for crawlers as <a href=\"sitemap.xml\">sitemap.xml</a>.</p>",
+        "<h2>Site</h2>",
+        "<ul>",
+        '<li><a href="index.html">Home</a></li>',
+        '<li><a href="about.html">About</a></li>',
+        '<li><a href="privacy.html">Privacy Policy</a></li>',
+        '<li><a href="contact.html">Contact</a></li>',
+        '<li><a href="disclaimer.html">Disclaimer</a></li>',
+        "</ul>",
+        "<h2>Dossiers</h2>",
+        "<ul>",
+    ]
+    for game in sorted(games, key=lambda g: str(g.get("title") or "").lower()):
+        slug = escape(str(game.get("slug") or ""))
+        title = escape(str(game.get("title") or "Untitled"))
+        genre = escape(str(game.get("primary_genre") or ""))
+        lines.append(f'<li><a href="games/{slug}.html">{title}</a> — {genre}</li>')
+    lines.append("</ul>")
+    return "\n".join(lines)
 
 
 def build() -> list[dict]:
@@ -296,6 +433,8 @@ def build() -> list[dict]:
     if games:
         default_og = absolute_media(cfg, games[0]["header_image"])
 
+    listings = [prepare_listing(g) for g in games]
+    featured = pick_featured(listings, 2)
     index_html = env.get_template("index.html").render(
         page_title=f"{cfg['site_name']} — {cfg['tagline']}",
         meta_description="English dossiers on Japanese Steam indies: why they exploded in Japan, language-barrier grades, and systems analysis.",
@@ -305,7 +444,8 @@ def build() -> list[dict]:
         json_ld=json_ld_website(cfg),
         root_prefix="",
         nav="home",
-        games=games,
+        games=listings,
+        featured=featured,
         adsense_client_id=cfg["adsense_client_id"] if cfg["adsense_client_id"].startswith("ca-pub-") and "XXXX" not in cfg["adsense_client_id"] else "ca-pub-2075840815269276",
         ga_id=cfg["ga_id"] if cfg["ga_id"].startswith("G-") and "XXXX" not in cfg["ga_id"] else "",
         year=cfg["year"],
@@ -376,6 +516,24 @@ def build() -> list[dict]:
         year=cfg["year"],
     )
     render_to(DOCS / "404.html", not_found)
+    sitemap_html = page_tmpl.render(
+        page_title="Sitemap — J-Indie Radar",
+        meta_description="HTML sitemap of J-Indie Radar: editorial pages and every Japanese indie dossier.",
+        canonical=f"{cfg['site_url']}/sitemap.html",
+        og_type="website",
+        og_image=default_og,
+        json_ld=json_ld_about(cfg, "Sitemap", "HTML sitemap of J-Indie Radar dossiers and editorial pages.", "/sitemap.html"),
+        root_prefix="",
+        nav="home",
+        kicker="Index",
+        heading="Sitemap",
+        updated=date.today().isoformat(),
+        body=sitemap_page_body(games),
+        adsense_client_id=adsense,
+        ga_id=ga,
+        year=cfg["year"],
+    )
+    render_to(DOCS / "sitemap.html", sitemap_html)
     write_robots_and_sitemap(cfg, games)
     print(f"Built {len(games)} dossiers into {DOCS}")
     return games

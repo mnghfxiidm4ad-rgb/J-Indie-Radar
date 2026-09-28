@@ -27,6 +27,7 @@ if str(SCRIPTS) not in sys.path:
 
 from gemini_prompt import (  # noqa: E402
     DOSSIER_SCHEMA,
+    FACT_UNKNOWN,
     GEMINI_MODEL_DEFAULT,
     GEMINI_MODEL_FALLBACKS,
     SYSTEM_PROMPT,
@@ -82,6 +83,43 @@ def fetch_steam_details(appid: int, session: requests.Session) -> dict | None:
     except Exception as exc:
         print(f"[steam] details failed for {appid}: {exc}")
         return None
+
+
+def strip_html(text: str) -> str:
+    cleaned = re.sub(r"<br\s*/?>", ", ", text or "", flags=re.I)
+    cleaned = re.sub(r"<[^>]+>", "", cleaned)
+    return re.sub(r"\s+", " ", cleaned).strip()
+
+
+def fetch_steam_review_status(appid: int, session: requests.Session) -> str:
+    """Overall Steam review label + percentage from the official reviews API."""
+    try:
+        res = session.get(
+            STEAM_REVIEWS.format(appid=appid),
+            params={
+                "json": 1,
+                "language": "all",
+                "filter": "recent",
+                "num_per_page": 1,
+                "purchase_type": "all",
+            },
+            timeout=30,
+            headers=HEADERS,
+        )
+        res.raise_for_status()
+        summary = res.json().get("query_summary") or {}
+        desc = str(summary.get("review_score_desc") or "").strip()
+        total = int(summary.get("total_reviews") or 0)
+        positive = int(summary.get("total_positive") or 0)
+        if desc and total > 0:
+            pct = round(100 * positive / total)
+            return f"{desc} ({pct}% of {total} reviews)"
+        if desc:
+            return desc
+        return FACT_UNKNOWN
+    except Exception as exc:
+        print(f"[steam] review summary failed for {appid}: {exc}")
+        return FACT_UNKNOWN
 
 
 def fetch_japanese_reviews(appid: int, session: requests.Session, count: int = 25) -> str:
@@ -164,6 +202,9 @@ def enrich_from_steam(game: dict, details: dict | None) -> dict:
     year = re.search(r"(19|20)\d{2}", release)
     if year and not out.get("release_year"):
         out["release_year"] = int(year.group(0))
+    pubs = details.get("publishers") or []
+    if pubs and not out.get("publisher"):
+        out["publisher"] = ", ".join(pubs)
     header = details.get("header_image")
     if header:
         out["header_image"] = header
@@ -212,6 +253,17 @@ def coerce_dossier(payload: dict) -> dict:
                 if title or details:
                     fixed.append({"title": title or (details[:80] if details else "Note"), "details": details or title})
         out["why_trending_in_japan"] = fixed[:3]
+    if not str(out.get("headline") or "").strip():
+        out["headline"] = str(out.get("vibe") or "").strip()
+    quote = str(out.get("community_quote") or "").strip()
+    if quote:
+        out["community_quote"] = quote
+    radar = str(out.get("radar_score") or "").strip()
+    if radar:
+        out["radar_score"] = radar
+    visuals = str(out.get("visuals_audio_identity") or "").strip()
+    if visuals:
+        out["visuals_audio_identity"] = visuals
     lb = out.get("language_barrier")
     if isinstance(lb, str):
         out["language_barrier"] = {"level": coerce_language_level(lb), "details": lb}
@@ -249,6 +301,16 @@ def validate_dossier(payload: dict, strict: bool = True) -> list[str]:
         errors.append("language_barrier.level invalid")
     elif not str(lb.get("details", "")).strip():
         errors.append("language_barrier.details missing")
+    if not str(payload.get("headline", "")).strip():
+        errors.append("missing headline")
+    visuals = word_count(payload.get("visuals_audio_identity", ""))
+    visuals_min = 90 if strict else 60
+    if visuals < visuals_min:
+        errors.append(f"visuals_audio_identity word count {visuals} < 120")
+    if not str(payload.get("community_quote", "")).strip():
+        errors.append("missing community_quote")
+    if not str(payload.get("radar_score", "")).strip():
+        errors.append("missing radar_score")
     return errors
 
 
@@ -338,8 +400,9 @@ def discover_flash_models(api_key: str) -> list[str]:
 
 def generation_config(thinking: str | None, use_schema: bool) -> dict[str, Any]:
     config: dict[str, Any] = {
+        "temperature": 0.55,
+        "maxOutputTokens": 4096,
         "responseMimeType": "application/json",
-        "maxOutputTokens": 8192,
     }
     if use_schema:
         config["responseSchema"] = DOSSIER_SCHEMA
@@ -526,6 +589,38 @@ def slugify(title: str, appid: int) -> str:
     return slug[:60] or f"app-{appid}"
 
 
+def build_verified_meta(appid: int, details: dict, review_summary: str) -> dict:
+    """Assemble prompt-ready Steam facts. Missing values stay explicit, never guessed."""
+    name = details.get("name") or f"Steam app {appid}"
+    developers = ", ".join(details.get("developers") or []) or FACT_UNKNOWN
+    publishers = ", ".join(details.get("publishers") or []) or FACT_UNKNOWN
+    genres = [g.get("description") for g in details.get("genres") or [] if g.get("description")]
+    cats = [c.get("description") for c in details.get("categories") or [] if c.get("description")]
+    tags = ", ".join(genres + cats[:8]) or FACT_UNKNOWN
+    languages = strip_html(details.get("supported_languages") or "") or FACT_UNKNOWN
+    short = strip_html(details.get("short_description") or "")
+    release = details.get("release_date") or {}
+    release_date = str(release.get("date") or "").strip() or FACT_UNKNOWN
+    if release.get("coming_soon") and release_date != FACT_UNKNOWN:
+        release_date = f"{release_date} (Coming Soon)"
+    year_match = re.search(r"(19|20)\d{2}", release.get("date") or "")
+    urls = steam_urls(appid)
+    return {
+        "title": name,
+        "developer": developers,
+        "publisher": publishers,
+        "release_date": release_date,
+        "release_year": int(year_match.group(0)) if year_match else date.today().year,
+        "review_summary": review_summary or FACT_UNKNOWN,
+        "tags": tags,
+        "genres": genres,
+        "languages": languages,
+        "store_url": urls["steam_url"],
+        "steam_url": urls["steam_url"],
+        "short_description": short,
+    }
+
+
 def dossier_from_gemini(appid: int, session: requests.Session) -> dict:
     details = fetch_steam_details(appid, session)
     if not details:
@@ -533,26 +628,12 @@ def dossier_from_gemini(appid: int, session: requests.Session) -> dict:
     if (details.get("type") or "game") != "game":
         raise RuntimeError(f"Steam app {appid} is {details.get('type')}, not a game")
     reviews = fetch_japanese_reviews(appid, session)
-    name = details.get("name") or f"Steam app {appid}"
-    developers = ", ".join(details.get("developers") or ["Unknown"])
-    genres = [g.get("description") for g in details.get("genres") or [] if g.get("description")]
-    cats = [c.get("description") for c in details.get("categories") or [] if c.get("description")]
-    tags = ", ".join(genres + cats[:8])
-    languages = details.get("supported_languages") or ""
-    short = re.sub("<[^<]+?>", "", details.get("short_description") or "")
-    release = details.get("release_date") or {}
-    year_match = re.search(r"(19|20)\d{2}", release.get("date") or "")
-    meta = {
-        "title": name,
-        "developer": developers,
-        "release_year": int(year_match.group(0)) if year_match else date.today().year,
-        "tags": tags,
-        "languages": languages,
-        "short_description": short,
-    }
+    review_summary = fetch_steam_review_status(appid, session)
+    meta = build_verified_meta(appid, details, review_summary)
     generated = call_gemini(meta, reviews)
     lb = generated["language_barrier"]
     lb["score"] = LEVELS.get(lb["level"], 2)
+    genres = meta.get("genres") or []
     primary = "Action"
     joined = " ".join(genres).lower()
     if "rpg" in joined:
@@ -565,23 +646,32 @@ def dossier_from_gemini(appid: int, session: requests.Session) -> dict:
         primary = "Adventure"
     playtime_short = generated["playtime_and_difficulty"].split(".")[0][:48]
     urls = steam_urls(appid)
+    name = meta["title"]
+    developers = meta["developer"] if meta["developer"] != FACT_UNKNOWN else "Unknown"
     game = {
         "appid": appid,
         "slug": slugify(name, appid),
         "title": name,
         "developer": developers,
+        "publisher": meta["publisher"],
         "release_year": meta["release_year"],
+        "release_date": meta["release_date"],
+        "review_status": meta["review_summary"],
         "genres": genres[:4] or [primary],
         "primary_genre": primary,
+        "headline": generated.get("headline") or generated["vibe"],
         "vibe": generated["vibe"],
         "playtime_short": playtime_short,
         "difficulty": playtime_short,
         "language_barrier": lb,
         "what_is_it": generated["what_is_it"],
         "deep_dive_analysis": generated["deep_dive_analysis"],
+        "visuals_audio_identity": generated.get("visuals_audio_identity") or "",
         "why_trending_in_japan": generated["why_trending_in_japan"],
+        "community_quote": generated.get("community_quote") or "",
         "playtime_and_difficulty": generated["playtime_and_difficulty"],
         "target_audience": generated["target_audience"],
+        "radar_score": generated.get("radar_score") or "",
         "header_image": details.get("header_image") or urls["header_image"],
         "steam_url": urls["steam_url"],
         "updated": date.today().isoformat(),
